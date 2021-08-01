@@ -1,0 +1,629 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title>Windows Server 2016 配置VPN服务</title>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/fahuo/upload/static/style/public.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>(function(){var a=document.documentElement.clientWidth||document.body.clientWidth;if(a>460){a=460}else{if(a<320){a=320}}document.documentElement.style.fontSize=(a/26.5)*1+"px"})();</script>
+<!-- js -->
+<script src="https://cdn.jsdelivr.net/gh/fahuo/upload/js/jquery/jquery-2.0.3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fahuo/upload/js/jquery/jquery.lazyload-1.9.1.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fahuo/upload/js/jquery/jquery.qrcode-1.0.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+      $("img.dplazy").lazyload({
+      	placeholder : "https://cdn.jsdelivr.net/gh/fahuo/upload/img/public/lazygray.png",
+      	effect: "fadeIn",
+      	threshold: 1500
+      });
+  });
+</script>
+</head>
+
+<body>
+
+
+<div class="all_body">
+
+  <h1>Windows Server 2016 配置VPN服务</h1>
+
+  <!-- 头像标识区 -->
+  <div class="AuthorInfo">
+    <div class="author"><img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/fahuo/upload/img/toux/xiyue_toux.png"></div>
+    <div class="AuthorInfo-content">
+      <div class="AuthorInfo-head"></div>
+      <div class="AuthorInfo-badge"></div>
+    </div>
+  </div>
+
+  <div class="win_banben">
+    <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/win2016_vpn.jpg">
+  </div>
+
+  <!-- 正文 -->
+  <div class="n_note_cont">
+    <div class=" ">
+      <p><span>使用 Windows Server 2016 配置 VPN 服务，</span></p>
+      <p><span>实现科学上网。</span></p>
+      <p>&nbsp;</p>
+      <p><span style="color: #f00;">本方法同样适用 Windows Server 2021，方法与流程完全一致。</span></p>
+      <p>&nbsp;</p>
+      <p><span style="color: #d800ff;">~不多说，跟着下面步骤来吧~</span></p>
+      <!-- <p>▼▼▼</p> -->
+    </div>
+  </div>
+
+  <div class="n_note_cont">
+    <div class="numb_note">
+      <div class="number_title">
+        <em>1</em></div>
+      <div class="numb_text_title">
+        <strong>安装远程桌面 管理工具</strong></div>
+    </div>
+  </div>
+  <div class="n_note_cont">
+    <ul>
+      <li>安装 Parallels Client 远程桌面 管理工具，优点：支持（Windows、Mac、Android、iOS）多端设备；</li>
+      <li>
+        直接 <a class="alink_icon_18" href="https://www.parallels.cn/products/ras/download/client/" rel="noopener noreferrer nofollow" style="font-size:18px;" target="_blank"><strong>点我下载软件</strong></a>（官方版）；</li>
+      <br>
+      <li>iPhone 连接时，选择 <strong>L2TP</strong> 方式，按照要求输入需填项即可；</li>
+      <li>安卓设备 连接时，选择 <strong>PPTP</strong> 方式，按照要求输入需填项即可；</li>
+      <li><a href="edu_win10.html" rel="noopener noreferrer nofollow" target="_blank">Win10 连接方法（如连接时被拒绝，查看我解决）</a>；</li>
+    </ul>
+  </div>
+
+  <div class="n_note_cont">
+    <div class="numb_note">
+      <div class="number_title">
+        <em>2</em></div>
+      <div class="numb_text_title">
+        <strong>添加角色和VPN服务</strong></div>
+      <div class="numb_text_sm_tit">
+        <strong>打开服务器管理器点击角色，点击添加角色</strong></div>
+    </div>
+  </div>
+
+  <div class="n_note_cont">
+    <div class="zw_text_cont">
+      <!-- <p>打开App Store程序</p> -->
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-1.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击添加角色和功能</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-2.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-3.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-4.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-5.png" /></p>
+      <p>
+        ▼</p>
+      <p>在 “<strong>服务器角色</strong>” 页面，选择安装 “<strong>网络策略和访问服务</strong>” 以及 “<strong>远程访问</strong>” 两项角色。</p>
+      <p>&nbsp;</p>
+      <p>
+        勾选 <strong>网络策略和访问服务</strong></p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-6.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【添加功能】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-7.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        勾选 <strong>远程访问</strong></p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-8.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        确认 “<strong>网络策略和访问服务</strong>” 以及 “<strong>远程访问</strong>” 已经勾选，<br>点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-9.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-10.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-11.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        勾选 <strong>DirectAccess 和VPN(RAS)</strong></p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-12.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-13.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【添加功能】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-14.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        注意，在勾选 “<strong>路由</strong>” 服务时，会弹出默认依赖的角色服务及功能，保持默认即可。</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-15.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        确认已勾选 “<strong>DirectAccess 和VPN(RAS)</strong>” 和 “<strong>路由</strong>”，点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-16.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-17.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        IIS 的依赖配置直接保持默认，点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-18.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【安装】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-19.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        接下来，等待功能安装完成即可</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-20.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        安装完成，<br>至此，相关服务及功能的安装过程到此结束。<br>点击【关闭】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnpz-21.png" /></p>
+    </div>
+  </div>
+
+  <div class="n_note_cont">
+    <div class="numb_note">
+      <div class="number_title">
+        <em>3</em></div>
+      <div class="numb_text_title">
+        <strong>配置路由和远程访问</strong></div>
+      <div class="numb_text_sm_tit">
+        在 “<strong>服务器管理器</strong>” 菜单中，点击 “<strong>工具</strong>” 选择 “<strong>路由和远程访问</strong>” 配置面板。</div>
+    </div>
+  </div>
+
+  <div class="n_note_cont">
+    <div class="zw_text_cont">
+      <!-- <p>打开App Store程序</p> -->
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-1.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        右键本地服务器，选择 “<strong>配置并启用路由和远程访问</strong>”，启动配置向导。</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-2.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-3.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        在配置向导中选择 “<strong>自定义配置</strong>”，以便进行功能的自由组合配置。</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-4.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        勾选 需要的服务</p>
+      <p>&nbsp;</p>
+      <p>
+        <strong>相关说明：</strong><br>勾选 “<strong>LAN 路由</strong>” 这一项，是为了登陆以后可以访问与服务器处于同一局域网的机器方便而选的，如果你的服务器局域网内没有要直接访问的，那么这一项可以不选。</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-5.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【确定】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-7.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【确定】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-8.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【启动服务】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-9.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        等待 启动完成 即可</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-10.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【完成】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-6.png" /></p>
+
+
+
+      <p>
+        ▼</p>
+      <p>
+        展开 “<strong>IPv4</strong>”，右键 “<strong>NAT</strong>” 项，选择 “<strong>新增接口</strong>”，并选择添加 “<strong>Ethernet0</strong>” 接口</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-11.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        选择 “<strong>Ethernet0</strong>” ，有的叫 “<strong>以太网</strong>”，点击确定</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-13.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        在 “<strong>Ethernet0</strong>” 接口的 <strong>NAT</strong> 配置中，选则 “<strong>公用接口链接到Internet</strong>”，并勾选 “<strong>在此接口上启用 NAT</strong>”</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-12.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        接下来，继续在 <strong>NAT</strong> 上配置内部接口，</p>
+      <p>
+        展开 “<strong>IPv4</strong>”，右键 “<strong>NAT</strong>” 项，选择 “<strong>新增接口</strong>”，并选择添加 “<strong>内部</strong>” 接口</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-11.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        选择 “<strong>内部</strong>”，点击确定</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-14.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        保持默认，点击【确认】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-15.png" /></p>
+
+
+      <p>
+        ▼</p>
+      <p>
+        配置本地服务器属性</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-16.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        在 “<strong>安全</strong>” 标签页中，设置预共享秘钥，iPhone的连接需要用到</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-18.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        在 “<strong>IPv4</strong>” 标签页中，设置为远端连接分配IP 的静态地址池，</p>
+      <!-- <p>
+        我这里填的： <strong>192.168.1.1 - 192.168.1.10</strong> 号段就可以了</p> -->
+      <p>
+        地址段跟着图中的填就可以了</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/ycfwpz-17.png" /></p>
+    </div>
+  </div>
+
+
+
+  <div class="n_note_cont">
+    <div class="numb_note">
+      <div class="number_title">
+        <em>4</em></div>
+      <div class="numb_text_title">
+        <strong>新建组和用户，用于访问VPN</strong></div>
+      <div class="numb_text_sm_tit">
+        在 “<strong>服务器管理器</strong>” 菜单中，点击 “<strong>工具</strong>” 选择 “<strong>计算机管理</strong>” 配置面板。</div>
+    </div>
+  </div>
+
+  <div class="n_note_cont">
+    <div class="zw_text_cont">
+      <!-- <p>打开App Store程序</p> -->
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/userspz-1.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        按图操作新建组</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/userspz-2.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        填写组名，点击【创建】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/userspz-3.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        按照下图新建用户</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/userspz-4.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        填写用户名密码，点击【创建】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/userspz-5.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击新建的用户名，右键选择 “<strong>属性</strong>”</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/userspz-6.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        按图中依次点击 <strong>隶属于</strong> – <strong>添加</strong> – <strong>高级</strong> – <strong>立即查找</strong> – <strong>VPN</strong> (前面我们自己创建的组名称) – <strong>确定</strong></p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/userspz-7.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        按照图片步骤来</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/userspz-8.png" /></p>
+
+    </div>
+  </div>
+
+
+
+  <div class="n_note_cont">
+    <div class="numb_note">
+      <div class="number_title">
+        <em>5</em></div>
+      <div class="numb_text_title">
+        <strong>配置 VPN 访问权限</strong></div>
+      <div class="numb_text_sm_tit">
+        在 “<strong>服务器管理器</strong>” 中，点击 <strong>NAPS</strong> – <strong>选择服务器</strong> – 启动 “<strong>网络策略服务器</strong>” 配置</div>
+    </div>
+  </div>
+
+  <div class="n_note_cont">
+    <div class="zw_text_cont">
+      <!-- <p>打开App Store程序</p> -->
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnfwpz-1.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        依次点击 <strong>策略</strong> – <strong>网络策略</strong> – 右键点击 <strong>新建</strong></p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnfwpz-2.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        在 “<strong>网络策略</strong>” 中，新建用于控制VPN 访问的网络策略，在 “<strong>网络访问服务器的类型</strong>” 中选择 “<strong>远程访问服务器(VPN 拨号)</strong>”。</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnfwpz-3.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        在指定条件中，根据实际需求，选择合适的匹配条件。比如，这里我选择了域中的 VPN用户组。</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnfwpz-4.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        选择 我们自己创建的 VPN 组</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnfwpz-5.png" /></p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnfwpz-6.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnfwpz-7.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        选择已授予访问权限，点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnfwpz-8.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        按默认的选择，点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnfwpz-9.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnfwpz-10.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnfwpz-11.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        可以看到我们创建的策略组</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnfwpz-12.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【完成】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/vpnfwpz-13.png" /></p>
+
+    </div>
+  </div>
+
+
+
+
+  <div class="n_note_cont">
+    <div class="numb_note">
+      <div class="number_title">
+        <em>6</em></div>
+      <div class="numb_text_title">
+        <strong>防火墙入/出站规则配置</strong></div>
+      <div class="numb_text_sm_tit">
+        依次打开 <strong>控制面板</strong> – <strong>系统和安全</strong> – <strong>Windows 防火墙</strong>，点击 <strong>高级设置</strong></div>
+    </div>
+  </div>
+
+  <div class="n_note_cont">
+    <div class="zw_text_cont">
+      <!-- <p>打开App Store程序</p> -->
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/fhqpz-1.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击 <strong>入站规则</strong></p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/fhqpz-2.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击 <strong>新建规则</strong></p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/fhqpz-3.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击 <strong>预定义</strong> 选项选择 <strong>路由和远程访问</strong></p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/fhqpz-4.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        确认预定义选项里已选择 <strong>路由和远程访问</strong> 点击下一步</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/fhqpz-5.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        勾选下图三项，点击【下一步】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/fhqpz-7.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        点击【完成】按钮</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/fhqpz-6.png" /></p>
+      <p>
+        ▼</p>
+      <p>
+        下图已看到已经添加好的规则</p>
+      <p>
+        同样的方法与步骤，可以将出站规则也添加一下</p>
+      <p class="pimg">
+        <img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/3606655/upload/vpn/fhqpz-8.png" /></p>
+
+    </div>
+  </div>
+
+
+
+  <!-- 好评赠送 -->
+  <!-- <div class="n_note_cont">
+    <div class="shop_about_cont" style="margin-top: 30px;">
+      <h3><strong>🌹 24小时内好评赠送 🌹</strong></h3>
+      <br>
+      <p><span style="background: #ffe89e; font-size: 18px; padding: 3px 0px;"> 带字五星❤️好评 + 晒几张图，什么图都可以 </span></p>
+      <p style="margin-top: 10px; color: #ff096c;">提交好评后，60秒内系统自动发送给你</p>
+      <br>
+      <p>👇👇👇</p>
+      <p><strong>永久影视会员，可以观看全网所有vip影视哟！</strong></p>
+      <div class="ysvip_pic">影视<br>会员</div>
+      <p>&nbsp;</p>
+      <p>💁 据说：</p>
+      <p>好看的小哥哥小姐姐，都已经评价了呢~💖~</p>
+      <p class="shop_zouzouzou"><img class="dplazy" data-original="https://cdn.jsdelivr.net/gh/fahuo/upload/img/haopingsong/hpzs_ttt.gif"></p>
+    </div>
+  </div> -->
+
+  <!-- 二维码 -->
+  <div class="bcqr_wrap">
+		<div class="bcqr_position_box">
+			<div class="bcqr_box">
+				<div id="qrcode"></div>
+				<script>jQuery('#qrcode').qrcode({render: "canvas", width: 120, height: 120, foreground: "#000", background: "#fff", text: "https://github.static.23456.cf/web/vpn/"});</script>
+				<div class="bcqr_text">
+					扫一扫<br>用手机查看
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- Footer -->
+<div class="pb_footer">
+  <div class="pb_footer_box">
+    Copyright © 2021 小喜悦分享通 <span class="foot_domain">Powered by <script language="javascript">
+    host=document.domain;
+    document.write(host)
+    </script></span>
+  </div>
+</div>
+
+</body>
+</html>
