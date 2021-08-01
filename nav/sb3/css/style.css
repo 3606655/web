@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,p,h1,h2,h3,h4,h5,h6,textarea,input,ul,li,iframe,dl,dd,dt,footer { margin:0; padding:0;}
+ul,li,ol,dl,dd,dt{list-style: none;}
+h1,h2,h3,h4,h5,h6{display: block;}
+
+a,a:hover,a:active,a:visited,a:link,a:focus,#menu-button,.submenu-button{ -webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight-color: transparent; outline:none; background: none; text-decoration: none; }
+
+body { font:16px/1.5 'Microsoft Yahei',Arial,Helvetica; color:#333; overflow:visible; margin:0rem auto; min-height:100%; height: 100%; background: #fafafa; }
+
+
+
+
+/* =+++++++++++++++++++++++++++++++++++++++++豪华分割线+++++++++++++++++++++++++++++++++++++++++= */
+
+/*PC*/
+@media screen and (min-width:1000px) {
+
+.head_menu_wrap {  height:80px; background:#ededed; }
+.head_menu { width:1100px; height:80px; margin:0px auto; }
+.head_logo { float:left; width:260px; height:80px; }
+.head_logo a { background:url(https://i.imgrpost.com/imgr/2019/04/26/logo.png) no-repeat; width:260px; height:80px; display:block; text-indent:-999px; overflow:hidden; }
+.head_menu_box { width:637px; float:right;}
+
+
+#cssmenu, #cssmenu ul, #cssmenu ul li, #cssmenu ul li a, #cssmenu #menu-button { display: block; position: relative; }
+
+#cssmenu { height: 80px; }
+#menu-line { position: absolute; bottom: 0; left: 0; height: 3px; background: #ffd21f; -webkit-transition: all 0.25s ease-out; -moz-transition: all 0.25s ease-out; -ms-transition: all 0.25s ease-out; -o-transition: all 0.25s ease-out; transition: all 0.25s ease-out; z-index: 1; pointer-events: none; }
+#cssmenu #menu-button { display: none; }
+
+
+#cssmenu > ul > li { float: left; margin-left: 1px; }
+#cssmenu > ul > li > a { font-size: 12px; color: #555; height: 80px; line-height: 80px; width: 90px; font-size: 16px; text-align: center; }
+#cssmenu > ul > li:hover > a, #cssmenu > ul > li.active > a { color: #333; background-color: #f8f8f8; }
+
+
+#cssmenu > ul > li.has-sub > a::after { position: absolute; top: 58px; left: 42px; width: 4px; height: 4px; border-bottom: 1px solid #c5c5c5; border-right: 1px solid #c5c5c5; content: ""; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); -webkit-transition: border-color 0.2s ease; -moz-transition: border-color 0.2s ease; -ms-transition: border-color 0.2s ease; -o-transition: border-color 0.2s ease; transition: border-color 0.2s ease; }
+
+
+#cssmenu ul ul { position: absolute; left: -9999px; z-index: 20; padding-top: 5px; padding-left: 5px; margin-left: -5px; }
+
+#cssmenu ul ul.sanji_menu, #cssmenu ul ul ul.siji_menu{ margin-top: -5px; }
+
+#cssmenu li:hover > ul { left: auto; }
+#cssmenu ul ul ul { margin-left: 100%; top: 0; }
+#cssmenu ul li:hover > ul > li { height: 38px; }
+
+
+#cssmenu ul ul li a { padding: 0px 12px; width: 100px; height: 38px; line-height: 38px; font-size: 14px; background: #ededed; text-decoration: none; color: #444; }
+#cssmenu ul ul li:hover > a, #cssmenu ul ul li a:hover { background-color: #d8d8d8; }
+#cssmenu ul ul li.has-sub > a::after { position: absolute; top: 16px; right: 10px; width: 4px; height: 4px; border-bottom: 1px solid #aaa; border-right: 1px solid #aaa; content: ""; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); -webkit-transition: border-color 0.2s ease; -moz-transition: border-color 0.2s ease; -ms-transition: border-color 0.2s ease;  -o-transition: border-color 0.2s ease; transition: border-color 0.2s ease; }
+#cssmenu ul ul li.has-sub:hover > a::after { border-color: #444; }
+
+
+}
+
+
+
+
+/* =+++++++++++++++++++++++++++++++++++++++++豪华分割线+++++++++++++++++++++++++++++++++++++++++= */
+
+/*Mobile*/
+
+@media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+
+  /* ------Head menu------ */
+.head_menu_wrap{ height: 58px; position: fixed; width: 100%; z-index: 100; }
+.head_menu{ width: 100%; height: 58px; position: relative; right: 0; top: 0; z-index: 10; }
+
+.head_logo{ width: 100%; position: absolute; left: 0px; height: 58px; background: #ededed; z-index: 2; }
+.head_logo a{ width: 153px; height: 47px; line-height: 40px; display: block; margin: 5px 0px 0px 10px; color: #444; background: url(https://i.imgrpost.com/imgr/2019/04/26/logo-m.png) no-repeat; background-size: 153px 47px; text-indent: -999px; overflow: hidden; }
+.head_logo a img{ width: 100%; height: auto; display: block; }
+
+.head_menu_box{ }
+
+#cssmenu, #cssmenu ul, #cssmenu ul li, #cssmenu ul li a, #cssmenu #menu-button { display: block; position: relative; }
+#cssmenu { width: 100%; height: 58px; z-index: 101; background: none; }
+#menu-line { display: none; }
+#cssmenu #menu-button { display: block; /*padding: 20px;*/ color: #000; cursor: pointer; font-size: 12px; text-transform: uppercase; height: 58px; width: 40px; position: absolute; right: 10px; top: 9px; }
+#cssmenu #menu-button .menu-icon{ width: 40px; height: 40px; display: block; background: url(https://i.imgrpost.com/imgr/2019/04/28/menu-icon.png) no-repeat center center; background-size: 40px 40px; }
+#cssmenu #menu-button.menu-opened .menu-icon{ background:  url(https://i.imgrpost.com/imgr/2019/04/28/menu-close-icon.png) no-repeat center center; background-size: 40px 40px; }
+
+#cssmenu ul.ulbig { width: 100%; display: none; background-color: white; position: absolute; top: 58px; border-top: 1px solid #e9e9e9;  }
+#cssmenu ul ul, #cssmenu ul ul ul , #cssmenu ul ul ul ul { position: relative; left: 0; right: auto; width: 100%; margin: 0; }
+
+/*#cssmenu ul li, #cssmenu ul ul li, #cssmenu ul li:hover > ul > li { width: 100%; line-height: 52px; border-top: 1px solid #dedede; }*/
+#cssmenu ul li { width: 100%; line-height: 50px; /*border-bottom: 1px solid #dedede;*/ background-color: #f2f2f2; }
+#cssmenu ul li a { width: 100%; padding: 0px 20px; font-size: 16px; border-bottom: 1px solid #e9e9e9; color: #444; }
+#cssmenu ul li.active{ background-color: #fff; }
+/*#cssmenu > ul > li:hover > a, #cssmenu > ul > li.active > a { color: #009ae1; background-color: pink; }*/
+
+/* erji_Menu */
+#cssmenu ul ul.erji_menu li{ width: 100%; line-height: 50px; background-color: #fffcf4; }
+#cssmenu ul ul li a { padding: 0px 20px 0px 30px; background: none; border-bottom: 1px solid #f2edde; color: #705042;  }
+#cssmenu ul ul.erji_menu li .submenu-button{ border-left: 1px solid #f2edde; }
+#cssmenu ul ul.erji_menu li .submenu-button::after { background: #705042; z-index: 99; }
+#cssmenu ul ul.erji_menu li .submenu-button::before { background: #705042; z-index: 99; }
+/* sanji_Menu */
+#cssmenu ul ul ul.sanji_menu li{ width: 100%; line-height: 50px; background-color: #fbf6e9; }
+#cssmenu ul ul ul li a { padding-left: 35px; color: #9c6a48; }
+#cssmenu ul ul ul.sanji_menu li .submenu-button::after { background: #9c6a48; z-index: 99; }
+#cssmenu ul ul ul.sanji_menu li .submenu-button::before { background: #9c6a48; z-index: 99; }
+/* siji_Menu */
+#cssmenu ul ul ul ul.siji_menu li{ width: 100%; line-height: 50px; background-color: #f8f1e1; }
+#cssmenu ul ul ul ul li a { padding-left: 50px; border-bottom: 1px solid #ede7d8; color: #c2845a; }
+#cssmenu ul ul ul ul.siji_menu li .submenu-button::after { background: #c2845a; z-index: 99; }
+#cssmenu ul ul ul ul.siji_menu li .submenu-button::before { background: #c2845a; z-index: 99; }
+/* More SUB */
+#cssmenu .submenu-button { position: absolute; z-index: 10; right: 0; top: 0; display: block; border-left: 1px solid #e9e9e9; width: 50px; height: 50px; line-height: 50px; cursor: pointer; /*background: white;*/ text-align: center; }
+#cssmenu .submenu-button::after { content: ''; position: absolute; top: 19px; left: 24px; display: block; width: 2px; height: 12px; background: #777; z-index: 99; }
+#cssmenu .submenu-button::before { content: ''; position: absolute; left: 19px; top: 24px; display: block; width: 12px; height: 2px; background: #777; z-index: 99; }
+#cssmenu .submenu-button.submenu-opened:after { display: none; }
+
+
+
+
+
+
+
+
+
+.m_body{ overflow: hidden; padding-top: 58px; }
+
+
+}

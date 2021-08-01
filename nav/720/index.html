@@ -1,0 +1,112 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>移动适配的多级导航菜单</title>
+
+  <link rel="stylesheet" href="http://www.freejs.net/demo/720/css/cmq.styles.min.css?v=1.0">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body class="content">
+
+<div class="menu-content overlay">
+
+	<nav class="menu">
+
+    	<ul>
+
+	    	<li class="menu__item">
+	    		<a href="#" class="menu__link">Link 1</a>
+	    	</li>
+
+	    	<li class="menu__item to-left">
+	    		<a href="#" class="menu__link">Link 2</a>
+	    		<ul class="menu__sub-menu">
+		    		<li class="menu__sub-menu__item">
+		    			<a href="" class="menu__sub-menu__link">Submenu link 1</a>
+		    		</li>
+
+		    		<li class="menu__sub-menu__item">
+		    			<a href="" class="menu__sub-menu__link">Submenu link 2</a>
+		    		</li>
+
+		    		<li class="menu__sub-menu__item to-left">
+		    			<a href="" class="menu__sub-menu__link">Submenu link 3</a>
+
+		    			<ul class="menu__sub-menu">
+				    		<li class="menu__sub-menu__item">
+				    			<a href="" class="menu__sub-menu__link">Submenu link 1</a>
+				    		</li>
+
+				    		<li class="menu__sub-menu__item">
+				    			<a href="" class="menu__sub-menu__link">Submenu link 2</a>
+				    		</li>
+
+				    		<li class="menu__sub-menu__item">
+				    			<a href="" class="menu__sub-menu__link">Submenu link 3</a>
+				    			<ul class="menu__sub-menu">
+						    		<li class="menu__sub-menu__item">
+						    			<a href="" class="menu__sub-menu__link">Submenu link 1</a>
+						    		</li>
+
+						    		<li class="menu__sub-menu__item">
+						    			<a href="" class="menu__sub-menu__link">Submenu link 2</a>
+						    		</li>
+				    			</ul>
+				    		</li>
+
+				    		<li class="menu__sub-menu__item">
+				    			<a href="" class="menu__sub-menu__link">Submenu link 4</a>
+				    		</li>
+			    		</ul>
+		    		</li>
+
+		    		<li class="menu__sub-menu__item">
+		    			<a href="" class="menu__sub-menu__link">Submenu link 4</a>
+		    		</li>
+	    		</ul>
+
+	    	</li>
+
+	    	<li class="menu__item">
+	    		<a href="#" class="menu__link">Link 3</a>
+	    	</li>
+
+	    	<li class="menu__item">
+	    		<a href="#" class="menu__link">Link 4</a>
+	    	</li>
+
+    	</ul>
+
+	</nav>
+
+</div>
+
+<div class="page-content">
+
+
+
+	<div id="nav-icon" class="menu-button visible-xs">
+		<span class="burger-icon"></span>
+	</div>
+
+
+<script type='text/javascript' src="http://www.freejs.net/js/jquery-1.9.1.min.js"></script>
+<script src="http://www.freejs.net/demo/720/js/scripts.js"></script>
+<script>
+jQuery(document).ready(function($) {
+	$('.menu').responsiveMenu({
+		breakpoint: '992'
+	});
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>提取</title>
+ <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+ <link rel="stylesheet" href="style/weuix.min.css"/>
+ <link rel="stylesheet" href="style/main.css"/>
+
+
+</head>
+
+<body ontouchstart class="page-bg">
+<header>
+  <div class="title">提取</div>
+  <a href="home.html" class="h_back">退出</a>
+</header>
+
+
+<div class="my_tiqu_box">
+
+    <div class="my_qitu_fangshi">
+      <h4>收款方式</h4>
+      <ul>
+        <li class="select"><span class="weixin">微信<ins></ins</span></li>
+        <li><span class="alipay">支付宝<ins></ins></span></li>
+      </ul>
+    </div>
+    <div class="weui_cells weui_cells_form" style="margin-top:0;">
+    <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">收款账户</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="number" placeholder="输入收款账号">
+        </div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">收款人姓名</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="number" placeholder="输入收款人姓名">
+        </div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">收款人手机</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="number" placeholder="输入收款人手机">
+        </div>
+    </div>
+</div>
+
+    <div style="padding: 14px 0 0 30%;">
+        <div class="my_holder_xuank">
+            <label><input type="checkbox"><span></span><em>设为默认提现账户</em></label>
+        </div>        
+    </div>
+
+    <div class="my_qrcode_btn">
+        <ul>
+            <li><a href="#" class="my_btn_blue_style">返回</a></li>
+            <li><a href="#" class="my_btn_blue_style">提交</a></li>
+        </ul>
+    </div>
+
+
+	<div class="my_tiqu_shuoming">
+		<p><em>●</em><span>收益会自动提取到您的微信钱包，请注意查收。</span></p>
+		<p><em>●</em><span>提现成功后，若未收到记录，请联系官方客服。</span></p>
+		<p><em>●</em><span>客服微信：weixinhao、weixinhao2、weixinhao3。</span></p>
+		<p><em>●</em><span>收益以天为单位进行结算，只可提取今天之前的收益。</span></p>
+	</div>
+</div>
+
+<script src="js/zepto.min.js"></script>
+<script type="text/javascript">
+    // toast
+    $(function(){
+        var $toast = $('#toast');
+        $('#showToast').on('click', function(){
+            if ($toast.css('display') != 'none') return;
+
+            $toast.fadeIn(100);
+            setTimeout(function () {
+                $toast.fadeOut(100);
+            }, 2000);
+        });
+    });
+</script>
+
+<!-- 提取失败提示 -->
+<div id="toast" style="opacity: 0; display: none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui_icon_toast"></i>
+        <p class="weui_toast_content">提取失败</p>
+    </div>
+</div>
+</body>
+</html>

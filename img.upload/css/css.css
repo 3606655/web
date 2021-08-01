@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,p,h1,h2,h3,h4,h5,h6,textarea,input,ul,li,iframe,dl,dd,dt,footer { margin:0; padding:0;}
+ul,li,ol,dl,dd,dt{list-style: none;}
+h1,h2,h3,h4,h5,h6{display: block;}
+
+body { font:16px/1.5 "Microsoft Yahei",Arial,Helvetica; color:#333; overflow:visible; margin:0rem auto; min-height:100%; height: 100%; background: #fff;}
+
+a{ text-decoration: none; color: #6f0a2e; }
+a:hover{ text-decoration: underline; }
+
+
+.amenu{ width: 1000px; margin: 30px auto 0px; }
+.amenu ul{ overflow: hidden; }
+.amenu ul li{ float: left; margin-right: 12px; font-size: 15px; }
+.amenu ul li a{ border: 1px dashed #ccc; display: block; height: 36px; line-height: 36px; text-align: center; color: #999; padding: 0px 12px; }
+.amenu ul li a.cur{ border: 1px dashed #71c7f8; background: #eff9ff; color: #1292ff; font-weight: bold; }
+
+.main_body{ width: 1000px; margin: 0px auto; padding: 10px 0px 50px; overflow: hidden; }
+
+h1{ margin-top: 20px; font-size: 24px; } 
+h1 a{ color: #333; text-decoration: underline; }
+h1 a:hover{ color: #6f0a2e; }
+
+
+.picbox{ padding-bottom: 20px; }
+.picbox p{ margin-top: 10px; }
+.picbox p em{ margin: 0px 10px; color: #999; }
+
+}
+	
+
+
+
+

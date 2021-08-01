@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>赠送</title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+<link rel="stylesheet" href="style/weuix.min.css"/>
+<link rel="stylesheet" href="style/main.css"/>
+<style type="text/css">
+	.weui_icon_success:before{ color: #4aa4ee; }
+    .weui-picker-modal .picker-button{ color: #0f8ee9; }
+</style>
+
+</head>
+
+<body ontouchstart class="page-bg">
+<header>
+  <div class="title">赠送</div>
+  <a href="home.html" class="h_back">退出</a>
+  <a href="zengsong_jilu.html" class="h_zengsong">赠送记录</a>
+</header>
+
+
+
+<div class="my_body_margin">
+
+    <div class="my_tab_box" style="height:32px;" id="tab1">
+        <div class="my_tab_nav"> <a href="zengsong.html" class="weui_navbar_item my_nav_blue">元宝</a> <a href="zengsong_fangka.html" class="weui_navbar_item my_nav_blue bg_blue">房卡</a></div>
+    </div>    
+
+</div>
+
+
+<div class="weui_cells weui_cells_form">
+    <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">游戏ID</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" placeholder="输入目标玩家游戏ID">
+                </div>
+            </div>
+    <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">赠送数量</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" placeholder="输入赠送数量">
+                </div>
+            </div>
+</div>
+
+<div class="my_zengsong_sys">
+    <p>剩余房卡数：<span>56</span></p>
+    <h4></h4>
+</div>
+
+<div class="my_btn_area">
+    <a href="javascript:;" class="weui_btn my_btn_blue_style" id="showToastOk">确定</a>
+    <a href="javascript:;" class="weui_btn my_btn_red_style" id="sbDialog">新增失败示例</a>
+</div>
+
+<!-- 赠送成功提示 开始 -->
+<div id="toastOk" style="opacity: 0; display: none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui_icon_toast"></i>
+        <p class="weui_toast_content">赠送成功</p>
+    </div>
+</div>
+<!-- 赠送成功提示 结束 -->
+
+<script src="js/zepto.min.js"></script>
+<script type="text/javascript"> 
+
+    // toastOk
+    $(function(){
+        var $toast = $('#toastOk');
+        $('#showToastOk').on('click', function(){
+            if ($toast.css('display') != 'none') return;
+
+            $toast.fadeIn(100);
+            setTimeout(function () {
+                $toast.fadeOut(100);
+            }, 2000);
+        });
+    });
+
+    // 密码错误提示
+    $(function(){
+        $(document).on("click", "#sbDialog", function() {
+        $.toptips("赠送失败提示文案，峰哥请随意");
+        });
+    }) 
+
+</script>
+</body>
+</html>

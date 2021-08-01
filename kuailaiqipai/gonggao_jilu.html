@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人公告</title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+<link rel="stylesheet" href="style/weuix.min.css"/>
+<link rel="stylesheet" href="style/main.css"/>
+<style type="text/css">
+	.weui-picker-modal .picker-button{ color: #0f8ee9; }
+</style>
+
+</head>
+
+<body ontouchstart class="page-bg">
+<header>
+  <div class="title">个人公告</div>
+  <a href="home.html" class="h_back">返回</a>
+</header>
+
+
+<div class="my_body_margin">
+
+    <div class="my_tab_box" style="height:32px;" id="tab1">
+        <div class="my_tab_nav"> <a href="gonggao.html" class="weui_navbar_item my_nav_blue bg_blue">我的公告</a> <a href="gonggao_jilu.html" class="weui_navbar_item my_nav_blue">查看记录</a></div>
+    </div>
+
+    <!-- <div class="my_tab " style="height:44px;" id="taba1">
+      <div class="my_navbar" style="height:44px;">
+          <div class="my_navbar_item"><a href="gonggao.html">我的公告</a></div> <div class="my_navbar_item tab_blue"><a href="gonggao_jilu.html">查看记录</a></div>
+      </div>
+    </div> -->
+
+</div>
+
+<div class="my_gonggao_date_cx">
+  <div class="my_gonggao_date_box">
+    <div class="my_gg_date_time">
+      <div class="my_gg_date_riqi">
+        <span>日期</span>
+        <div class="shuruk"><input class="weui_input" type="text" value="2018-08-08" id='date'/></div>
+      </div>
+      <div class="my_gg_date_riqi">
+        <span style="text-align:center;">至</span>
+        <div class="shuruk"><input class="weui_input" type="text" value="2018-08-08" id='date2'/></div>
+      </div>
+    </div>
+    <div class="my_gg_date_btn"><a href="javascript:;" class="my_btn_blue_style" id='chaxun_btn'>查询</a></div>
+  </div>
+</div>
+
+<div id="my_gonggao_date_chaxun_box" style="display: block;">
+  请选择日期进行查询
+</div>
+
+<div class="hide" id="my_gonggao_date_table">
+  <table class="weui-table weui-border-b">
+    <thead>
+      <tr><th>记录ID</th><th>公告内容</th><th>状态</th><th>时间</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>120</td><td>每一张可爱在远处的笑面，每一分亲切</td><td>通过</td><td>2016-02-06 18:20:32</td></tr>
+      <tr><td>120</td><td>寂静没晚霞</td><td>已拒绝</td><td>2016-02-06 18:20:32</td></tr>
+      <tr><td>120</td><td>每一张可爱在远处的笑面，每一分亲切</td><td>通过</td><td>2016-02-06 18:20:32</td></tr>
+      <tr><td>120</td><td>寂静没晚霞</td><td>已拒绝</td><td>2016-02-06 18:20:32</td></tr>
+      <tr><td>120</td><td>每一张可爱在远处的笑面，每一分亲切</td><td>通过</td><td>2016-02-06 18:20:32</td></tr>
+      <tr><td>120</td><td>寂静没晚霞</td><td>已拒绝</td><td>2016-02-06 18:20:32</td></tr>
+      <tr><td>120</td><td>每一张可爱在远处的笑面，每一分亲切</td><td>通过</td><td>2016-02-06 18:20:32</td></tr>
+      <tr><td>120</td><td>寂静没晚霞</td><td>已拒绝</td><td>2016-02-06 18:20:32</td></tr>
+      <tr><td>120</td><td>每一张可爱在远处的笑面，每一分亲切</td><td>通过</td><td>2016-02-06 18:20:32</td></tr>
+      <tr><td>120</td><td>寂静没晚霞</td><td>已拒绝</td><td>2016-02-06 18:20:32</td></tr>
+      <tr><td>120</td><td>每一张可爱在远处的笑面，每一分亲切</td><td>通过</td><td>2016-02-06 18:20:32</td></tr>
+      <tr><td>120</td><td>寂静没晚霞</td><td>已拒绝</td><td>2016-02-06 18:20:32</td></tr>
+    </tbody>
+  </table>
+ </div>
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/picker.js"></script>
+<script>
+    // tab nav
+    $(function(){
+        $('#tab1').tab({defaultIndex:1,activeClass:"bg_blue"});
+        // $('#taba1').tab({defaultIndex:1,activeClass:"tab_blue"});
+    }); 
+
+    // 日期选择控件
+    $(function(){ 
+      $("#date,#date2").datetimePicker({title:"选择日期",m:1});
+    }); 
+
+    // 点击查询按钮切换场景
+    $(function(){
+      $('#chaxun_btn').click(
+        function(){
+          $('#my_gonggao_date_chaxun_box').fadeOut();
+          $('#my_gonggao_date_table').fadeIn();
+        })  
+    });  
+</script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>收益明细</title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+<link rel="stylesheet" href="style/weuix.min.css"/>
+<link rel="stylesheet" href="style/main.css"/>
+<style type="text/css">
+	.weui_icon_success:before{ color: #4aa4ee; }
+    .weui-picker-modal .picker-button{ color: #0f8ee9; }
+</style>
+
+</head>
+
+<body ontouchstart class="page-bg">
+<header>
+  <div class="title">收益明细</div>
+  <a href="home.html" class="h_back">退出</a>
+</header>
+
+
+<div class="my_body_margin">
+
+    <div class="my_shouyi_riqi">
+        <div class="my_shouyi_bdl">
+            <div class="my_shouyi_riqi_bd">收益日期：</div>
+            <div class="my_shouyi_riqi_sr"><input class="weui_input" type="text" value="2018-08-08" id='date'/></div>
+        </div>
+        <div class="my_shouyi_riqi_btn"><a href="javascript:;" class="my_btn_blue_style" id='chaxun_btn'>查询</a></div>
+    </div>
+    
+    <div class="my_shouyi_zonge">
+        <div class="my_shouyi_jine">当日总收益：<strong>24550</strong>元</div>
+        <div class="my_shouyi_smwz">今日收益整点刷新</div>
+    </div> 
+
+    <!-- tabnav begin -->
+    <div class="my_tab_box" style="height:32px;" id="tab1">
+        <div class="my_tab_nav"> <a href="shouyi.html" class="weui_navbar_item my_nav_blue bg_blue">代理(5)</a> <a href="wanjia_shouyi.html" class="weui_navbar_item my_nav_blue">玩家(5)</a></div>
+    </div>
+    <!-- tabnav end -->
+
+    <div id="my_shouyi_date_table">
+        <table class="weui-table weui-border-b">
+            <thead>
+                <tr><th>代理账号</th><th>茶馆名字</th><th>提成</th><th>操作时间</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>147528</td><td>安阳行省龙山楼</td><td>12830</td><td>15:32:32</td></tr>
+                <tr><td>147528</td><td>安阳行省龙山楼</td><td>12830</td><td>15:32:32</td></tr>
+                <tr><td>147528</td><td>安阳行省龙山楼</td><td>12830</td><td>15:32:32</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+
+</div>
+
+<!--BEGIN zhanghao_dialog-->   
+<div id="zhanghao_dialog">
+    <div class="js_dialog" id="czZhanghao" style="display: none;">
+        <div class="my_mask"></div>
+        <div class="my_dialog">
+            <div class="my_dialog_title"><strong>重置账号</strong></div>
+            <div class="my_zhanghao_dialog_cont">
+                <div class="my_zh_cell">
+                    <label class="my_zh_label">默认账号</label>
+                    <div class="my_zh_input">
+                        <input class="weui_input" type="text" placeholder="请输入默认账号">
+                    </div>
+                </div>
+                <!-- <div class="my_zhanghao_error_tips">请输入12个英文字符以内的中文/英文/数字</div> -->
+                <div class="my_zh_cell">
+                    <label class="my_zh_label">默认密码</label>
+                    <div class="my_zh_input">
+                        <input class="weui_input" type="text" placeholder="请输入默认密码">
+                    </div>
+                </div>
+            </div>
+            <div class="my_dialog_btn_ft">
+                <a href="javascript:;" class="my_dialog_btn my_dialog_btn_default">取消</a>
+                <a href="javascript:;" class="my_dialog_btn my_dialog_btn_primary" id="showToastOk">确定</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END zhanghao_dialog-->
+
+<!-- 赠送成功提示 开始 -->
+<div id="toastOk" style="opacity: 0; display: none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui_icon_toast"></i>
+        <p class="weui_toast_content">修改成功</p>
+    </div>
+</div>
+<!-- 赠送成功提示 结束 -->
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/picker.js"></script>
+<script type="text/javascript">
+    // 搜索
+    $(function(){
+        var $searchBar = $('#searchBar'),
+            $searchResult = $('#searchResult'),
+            $searchText = $('#searchText'),
+            $searchInput = $('#searchInput'),
+            $searchClear = $('#searchClear'),
+            $searchCancel = $('#searchCancel');
+
+        function hideSearchResult(){
+            $searchResult.hide();
+            $searchInput.val('');
+        }
+        function cancelSearch(){
+            hideSearchResult();
+            $searchBar.removeClass('my_search_bar_focusing');
+            $searchText.show();
+        }
+
+        $searchText.on('click', function(){
+            $searchBar.addClass('my_search_bar_focusing');
+            $searchInput.focus();
+        });
+        $searchInput
+            .on('blur', function () {
+                if(!this.value.length) cancelSearch();
+            })
+            .on('input', function(){
+                if(this.value.length) {
+                    $searchResult.show();
+                } else {
+                    $searchResult.hide();
+                }
+            })
+        ;
+        $searchClear.on('click', function(){
+            hideSearchResult();
+            $searchInput.focus();
+        });
+        $searchCancel.on('click', function(){
+            cancelSearch();
+            $searchInput.blur();
+        });
+    });
+
+    // 日期选择控件
+    $(function(){ 
+      $("#date").datetimePicker({title:"选择日期",m:1});
+    });
+
+</script>
+</body>
+</html>

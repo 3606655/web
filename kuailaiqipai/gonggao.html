@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人公告</title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+<link rel="stylesheet" href="style/weuix.min.css"/>
+<link rel="stylesheet" href="style/main.css"/>
+<style type="text/css">
+	.weui_icon_success:before{ color: #4aa4ee; }
+</style>
+
+</head>
+
+<body ontouchstart class="page-bg">
+<header>
+  <div class="title">个人公告</div>
+  <a href="home.html" class="h_back">返回</a>
+</header>
+
+
+<div class="my_body_margin">
+
+    <div class="my_tab_box" style="height:32px;" id="tab1">
+        <div class="my_tab_nav"> <a href="gonggao.html" class="weui_navbar_item my_nav_blue bg_blue">我的公告</a> <a href="gonggao_jilu.html" class="weui_navbar_item my_nav_blue">查看记录</a></div>
+    </div>
+
+    <!-- <div class="my_tab " style="height:44px;" id="taba1">
+      <div class="my_navbar" style="height:44px;">
+          <div class="my_navbar_item tab_blue"><a href="gonggao.html">我的公告</a></div> <div class="my_navbar_item"><a href="gonggao_jilu.html">查看记录</a></div>
+      </div>
+    </div> -->
+
+</div>
+
+<div class="my_gonggao_textarea">
+    <div class="weui_cell_bd weui_cell_primary">
+        <textarea id="textarea" class="weui_textarea" placeholder="请输入公告内容，提交的公告内容不能超过30个汉字" rows="3"></textarea>
+        <div class="weui_textarea_counter"><span id="count">0</span>/<span id="count_max">30</span></div>
+    </div>
+</div>
+
+<div class="my_btn_area">
+    <a href="javascript:;" class="weui_btn my_btn_blue_style" id="showcgDialog">提交审核</a>
+    <a href="javascript:;" class="weui_btn my_btn_red_style" id="sbDialog">修改失败示例</a>
+</div>
+
+<div class="my_tiqu_shuoming">
+    <p>注意：</p>
+    <p><em>●</em><span>请填写您的推广公告内容，公告将显示在游戏大厅中；</span></p>
+    <p><em>●</em><span>提交审核后，待官方审核人员审核通过后，将立即发布至游戏公告中，审核等待时间为1-3天；</span></p>
+    <p><em>●</em><span>只有绑定了您的推广二维码的玩家才会现实您发布的公告信息！（请提交合法的公告内容已提高您的审核通过率）</span></p>
+</div>
+
+
+
+<script src="js/zepto.min.js"></script>
+<script>
+    // tab nav
+    $(function(){
+        $('#tab1').tab({defaultIndex:0,activeClass:"bg_blue"});
+        // $('#taba1').tab({defaultIndex:0,activeClass:"tab_blue"});
+    });
+
+    // 输入字符统计
+    $(function(){
+        var max = $('#count_max').text();
+            $('#textarea').on('input', function(){
+        var text = $(this).val();
+        var len = text.length;   
+            $('#count').text(len);    
+                if(len > max){
+                $(this).closest('.weui_cell').addClass('weui_cell_warn');
+            }
+            else{
+                $(this).closest('.weui_cell').removeClass('weui_cell_warn');
+            }     
+        });
+    }) 
+
+    // cgDialog
+    $(function(){
+            $cgDialog = $('#cgDialog');
+
+        $('#dialogs').on('click', '.my_dialog_btn', function(){
+            $(this).parents('.js_dialog').fadeOut(200);
+        });
+        
+        $('#showcgDialog').on('click', function(){
+            $cgDialog.fadeIn(200);
+        });
+    });
+
+    // 密码错误提示
+    $(function(){
+        $(document).on("click", "#sbDialog", function() {
+        $.toptips("提交失败，输入的文字超过了30个字符");
+        });
+    }) 
+</script>
+ 
+ <!--BEGIN cgDialog-->   
+<div id="dialogs">
+    <div class="js_dialog" id="cgDialog" style="display: none;">
+        <div class="my_mask"></div>
+        <div class="my_dialog">
+            <div class="my_dialog_title"><strong>提示</strong></div>
+            <div class="my_dialog_cont">提交成功，请等待官方审核</div>
+            <div class="my_dialog_btn_ft">
+                <a href="javascript:;" class="my_dialog_btn my_dialog_btn_primary">知道了</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END cgDialog-->
+
+</body>
+</html>

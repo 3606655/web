@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我的玩家</title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+<link rel="stylesheet" href="style/weuix.min.css"/>
+<link rel="stylesheet" href="style/main.css"/>
+<style type="text/css">
+	.weui_icon_success:before{ color: #4aa4ee; }
+    .weui_toptips.weui_warn{ background: #04be02; }
+</style>
+
+</head>
+
+<body ontouchstart class="page-bg">
+<header>
+  <div class="title">成员管理</div>
+  <a href="home.html" class="h_back">退出</a>
+</header>
+
+
+<div class="my_body_margin">
+    <!-- search begin -->
+    <div class="my_search_bar" id="searchBar">
+        <form class="my_search_bar_form">
+            <div class="my_search_bar_box">
+                <i class="weui_icon_search"></i>
+                <input type="search" class="my_search_bar_input" id="searchInput" placeholder="请输入玩家账号搜索">
+                <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+            </div>
+            <label class="my_search_bar_label" id="searchText">
+                <i class="weui_icon_search"></i>
+                <span>请输入玩家账号搜索</span>
+            </label>
+        </form>
+        <a href="javascript:" class="my_search_bar_cancel_btn" id="searchCancel">取消</a>
+    </div>
+    <!-- search end -->
+
+    <!-- tabnav begin -->
+    <div class="my_tab_box" style="height:32px;" id="tab1">
+        <div class="my_tab_nav"> <a href="chengyuan.html" class="weui_navbar_item my_nav_blue">下级代理</a> <a href="wodewanjia.html" class="weui_navbar_item my_nav_blue bg_blue">我的玩家</a></div>
+    </div>
+    <!-- tabnav end -->
+
+    <div class="my_daili_zongrs">
+        <div class="my_chengyuan_namber" style="text-align:center;"><span>玩家总人数：</span><strong>0</strong><em>人</em></div>
+        <!-- <div class="my_chengyuan_namber_btn"><a href="chengyuan_xinzeng.html" class="my_btn_blue_style">新增</a></div> -->
+    </div>
+
+    <div id="my_wanjia_date_table">
+        <table class="weui-table weui-border-b">
+            <thead>
+                <tr><th>序号</th><th>游戏ID</th><th>房卡</th><th>元宝</th><th>操作</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>123321</td><td>12</td><td>23455</td><td><a href="javascript:;" class="my_btn_bluebor_style" id="showzsWanjia">赠送</a></td></tr>
+                <tr><td>2</td><td>123321</td><td>12</td><td>23455</td><td><a href="#">赠送</a></td></tr>
+                <tr><td>3</td><td>123321</td><td>12</td><td>23455</td><td><a href="#">赠送</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+
+<!--BEGIN zhanghao_dialog-->   
+<div id="wanjia_dialog">
+    <div class="js_dialog" id="zsWanjia" style="display: none;">
+        <div class="my_mask"></div>
+        <div class="my_dialog">
+            <div class="my_dialog_title"><strong>赠送钻石</strong></div>
+            <div class="my_zhanghao_dialog_cont">
+                <div class="my_zh_cell">
+                    <div class="my_wj_input">
+                        <input class="weui_input" type="text" placeholder="请输入想要赠送的钻石数...">
+                    </div>
+                </div>
+            </div>
+            <div class="my_dialog_btn_ft">
+                <a href="javascript:;" class="my_dialog_btn my_dialog_btn_default">取消</a>
+                <a href="javascript:;" class="my_dialog_btn my_dialog_btn_primary" id="showToastOk">确定</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END zhanghao_dialog-->
+
+<!-- 赠送成功提示 开始 -->
+<div id="toastOk" style="opacity: 0; display: none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui_icon_toast"></i>
+        <p class="weui_toast_content">赠送成功</p>
+    </div>
+</div>
+<!-- 赠送成功提示 结束 -->
+
+<script src="js/zepto.min.js"></script>
+<script type="text/javascript">
+    // 搜索
+    $(function(){
+        var $searchBar = $('#searchBar'),
+            $searchResult = $('#searchResult'),
+            $searchText = $('#searchText'),
+            $searchInput = $('#searchInput'),
+            $searchClear = $('#searchClear'),
+            $searchCancel = $('#searchCancel');
+
+        function hideSearchResult(){
+            $searchResult.hide();
+            $searchInput.val('');
+        }
+        function cancelSearch(){
+            hideSearchResult();
+            $searchBar.removeClass('my_search_bar_focusing');
+            $searchText.show();
+        }
+
+        $searchText.on('click', function(){
+            $searchBar.addClass('my_search_bar_focusing');
+            $searchInput.focus();
+        });
+        $searchInput
+            .on('blur', function () {
+                if(!this.value.length) cancelSearch();
+            })
+            .on('input', function(){
+                if(this.value.length) {
+                    $searchResult.show();
+                } else {
+                    $searchResult.hide();
+                }
+            })
+        ;
+        $searchClear.on('click', function(){
+            hideSearchResult();
+            $searchInput.focus();
+        });
+        $searchCancel.on('click', function(){
+            cancelSearch();
+            $searchInput.blur();
+        });
+    });
+
+    // zhanghao_dialog
+    $(function(){
+            $cgDialog = $('#zsWanjia');
+
+        $('#wanjia_dialog').on('click', '.my_dialog_btn', function(){
+            $(this).parents('.js_dialog').fadeOut(200);
+        });
+        
+        $('#showzsWanjia').on('click', function(){
+            $cgDialog.fadeIn(200);
+        });
+    });
+
+    // toastOk
+    $(function(){
+        var $toast = $('#toastOk');
+        $('#showToastOk').on('click', function(){
+            if ($toast.css('display') != 'none') return;
+
+            $toast.fadeIn(100);
+            setTimeout(function () {
+                $toast.fadeOut(100);
+            }, 2000);
+        });
+    });
+
+</script>
+</body>
+</html>

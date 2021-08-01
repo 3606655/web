@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>成员管理</title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+<link rel="stylesheet" href="style/weuix.min.css"/>
+<link rel="stylesheet" href="style/main.css"/>
+<style type="text/css">
+	.weui_icon_success:before{ color: #4aa4ee; }
+    .weui_cells_radio .weui_check:checked+.weui_icon_checked:before{ content: '\EA06'; color: #2183d3; font-size: 20px; width: 20px; height: 20px; }
+</style>
+
+</head>
+
+<body ontouchstart class="page-bg">
+<header>
+  <div class="title">新增会员</div>
+  <a href="chengyuan.html" class="h_back">返回</a>
+</header>
+
+<div class="my_body_margin">
+
+    <div class="my_user_infor">
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">游戏ID</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="number" placeholder="请输入游戏ID">
+            </div>
+        </div>
+
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">姓名</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="text" placeholder="请输入姓名">
+            </div>
+        </div>
+
+        <div class="weui_cell name_tips">必须与绑定微信银行卡姓名保持一直，否则无法提现</div>
+
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">手机号</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="tel" maxlength="11" placeholder="请输入手机号">
+            </div>
+        </div>
+
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">微信号</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="text" placeholder="请输入微信号">
+            </div>
+        </div>
+
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">茶楼名称</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="text" placeholder="请输入茶楼名称">
+            </div>
+        </div>
+
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">登录账号</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="text" placeholder="设置默认登录账号">
+            </div>
+        </div>
+
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">登录密码</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="text" placeholder="设置默认登录密码">
+            </div>
+        </div>        
+    </div>
+
+    <div class="my_xinz_userqx_t">是否开通新增账号权限</div>
+    <div class="weui_cells weui_cells_radio" style="margin-top:5px;">
+            <label class="weui_cell weui_check_label" for="x11">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>开通</p>
+                </div>
+                <div class="weui_cell_ft">
+                    <input type="radio" class="weui_check" name="radio1" id="x11" checked="checked">
+                    <span class="weui_icon_checked"></span>
+                </div>
+            </label>
+
+            <label class="weui_cell weui_check_label" for="x12">
+
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>不开通</p>
+                </div>
+                <div class="weui_cell_ft">
+                    <input type="radio" name="radio1" class="weui_check" id="x12">
+                    <span class="weui_icon_checked"></span>
+                </div>
+            </label>            
+        </div>
+
+    <div class="my_xinz_userqx_tips">*请务必保证你所提交的信息准确性，提交后不可更改</div>
+
+    <div class="my_btn_area">
+        <a href="javascript:;" class="weui_btn my_btn_blue_style" id="showcgDialog">确认</a>
+        <a href="javascript:;" class="weui_btn my_btn_red_style" id="sbDialog">新增失败示例</a>
+    </div>
+
+</div>
+
+<!--BEGIN cgDialog-->
+<div id="dialogs">
+    <div class="js_dialog" id="cgDialog" style="display: none;">
+        <div class="my_mask"></div>
+        <div class="my_dialog">
+            <div class="my_dialog_title"><strong>提示</strong></div>
+            <div class="my_dialog_cont">添加成功，可继续添加或返回列表</div>
+            <div class="my_dialog_btn_ft">
+                <a href="javascript:;" class="my_dialog_btn my_dialog_btn_primary">继续添加</a>
+                <a href="chengyuan.html" class="my_dialog_btn my_dialog_btn_primary">返回列表</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END cgDialog-->
+
+<script src="js/zepto.min.js"></script>
+<script>
+
+    // cgDialog
+    $(function(){
+            $cgDialog = $('#cgDialog');
+
+        $('#dialogs').on('click', '.my_dialog_btn', function(){
+            $(this).parents('.js_dialog').fadeOut(200);
+        });
+        
+        $('#showcgDialog').on('click', function(){
+            $cgDialog.fadeIn(200);
+        });
+    });
+
+    // 密码错误提示
+    $(function(){
+        $(document).on("click", "#sbDialog", function() {
+        $.toptips("失败提示文案，峰哥请随意");
+        });
+    }) 
+</script>
+</body>
+</html>
