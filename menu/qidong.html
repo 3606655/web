@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PRD布局</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link href="https://cdn.jsdelivr.net/gh/3606655/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/3606655/static/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="http://www.inspinia.net/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> 
+                        <!-- <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span> -->
+                            <!-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">李白</strong>
+                             </span> <span class="text-muted text-xs block">管理员 <b class="caret"></b></span> </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">个人信息</a></li>
+                                <li><a href="contacts.html">好友</a></li>
+                                <li><a href="mailbox.html">信箱</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">登出</a></li>
+                            </ul> -->
+                            <div style="color:#fff;font-size:18px;">前端部分</div>
+                        </div>
+                        <div class="logo-element">
+                            Miban
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-th-large fa-lg"></i> <span class="nav-label">终端选择</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="#"><i class="fa fa-unlock-alt fa-lg"></i> <span class="nav-label">启动&amp;登录页</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li class="active"><a href="qidong.html">启动页</a></li>
+                            <li><a href="#">登录页</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-flag fa-lg"></i> <span class="nav-label">公共模块</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">封号处理</a></li>
+                            <li><a href="#">公共模块</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-home fa-lg"></i> <span class="nav-label">首页 </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">首页（公共）</a></li>
+                            <li><a href="#">首页（男端）</a></li>
+                            <li><a href="#">首页（女端）</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-hashtag fa-lg"></i> <span class="nav-label">社区 </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">社区相关</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-comments fa-lg"></i> <span class="nav-label">消息 </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">消息首页</a></li>
+                            <li>
+                                <a href="#">密友列表</a></li>
+                            <li>
+                                <a href="#">通知中心</a></li>
+                            <li>
+                                <a href="#" id="damian">◉IM <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">策略消息</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">IM相关</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">我的缘分</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-lg"></i> <span class="nav-label">我的 </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="#" id="damian">◉男端独有 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">VIP</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">充值</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">每日福利</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">每日签到</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" id="damian">◉女端独有 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">我的收益</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">我的标签</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">搭讪设置</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">美颜设置</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" id="damian">◉两端共有 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">资料修改</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">我的动态</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">相册视频</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">好友绑定</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">邀请有奖</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">我的认证</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">我的等级</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">VIP客服</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">设置中心</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-android fa-lg"></i> <span class="nav-label">应用市场</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="form_basic.html">应用市场送审</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li>
+                        <a href="#"><i class="fa fa-android"></i> <span class="nav-label">应用市场送审</span></a>
+                    </li> -->
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" action="search_results.html">
+                            <div class="form-group">
+                                <input type="text" placeholder="请输入搜索内容" class="form-control" name="top-search" id="top-search">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">欢迎来到inspinia中文管理后台</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46小时前</small>
+                                            <strong>小明</strong> 评论了 <strong>小红</strong>. <br>
+                                            <small class="text-muted">2017.10.06 7:58</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">5小时前</small>
+                                            <strong>小红</strong> 打电话给了 <strong>小黑</strong>. <br>
+                                            <small class="text-muted">2017.10.06 7:58</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/profile.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right">23小时前</small>
+                                            <strong>小黑</strong> 点赞了 <strong>小红</strong>. <br>
+                                            <small class="text-muted">2017.10.06 7:58</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="mailbox.html">
+                                            <i class="fa fa-envelope"></i> <strong>阅读所有消息</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> 你有16条消息
+                                            <span class="pull-right text-muted small">4 分钟前</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-twitter fa-fw"></i> 3 个新的关注者
+                                            <span class="pull-right text-muted small">12 分钟前</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="grid_options.html">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> 重启服务器
+                                            <span class="pull-right text-muted small">4 分钟前</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>查看所有信息</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> 注销
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li><a rel="nofollow" target="_blank" href="http://nicethemes.cn/product/view8.html"><i class="fa fa-shopping-cart  btn btn-primary "></i>立即购买</a></li>
+                        <li><a rel="nofollow" target="_blank" href="http://nicethemes.cn/shop/view6.html"><i class="fa fa-shopping-cart  btn btn-primary "></i>更多模板</a></li>
+                    </ul> -->
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>布局</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">前端</a>
+                        </li>
+                        <li>
+                            <a href="#">启动&amp;登录页</a>
+                        </li>
+                        <li class="active">
+                            <strong>启动页</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+
+
+            <div class="wrapper wrapper-content animated fadeInRight">
+                
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content text-center p-md">
+                                <a href="#">
+                                    <p><i class="fa fa-android fa-3x" aria-hidden="true"></i></p>
+                                    <p><strong>前端部分</strong></p>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content text-center p-md">
+                                <a href="#">
+                                    <p><i class="fa fa-industry fa-3x" aria-hidden="true"></i></p>
+                                    <p><strong>后端部分</strong></p>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            <div class="footer">
+                <div>
+                    <strong>Copyright</strong> inspinia中文 &copy; 2017-2018
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="https://cdn.jsdelivr.net/gh/3606655/static/js/jquery/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/3606655/static/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/3606655/static/js/jquery/jquery.metisMenu.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/3606655/static/js/jquery/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="https://cdn.jsdelivr.net/gh/3606655/static/js/inspinia.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/3606655/static/js/pace/pace.min.js"></script>
+
+    
+
+
+</body>
+
+</html>
