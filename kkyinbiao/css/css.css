@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+html,body,p,h1,h2,h3,h4,h5,h6,textarea,input,ul,li,iframe,dl,dd,dt,footer { margin:0; padding:0;}
+ul,ol,dl,dd,dt{list-style: none;}
+h1,h2,h3,h4,h5,h6{display: block;}
+
+.clear{ clear:both; font-size: 0px; height: 0px; line-height: 0px; overflow: hidden; display: block; }
+
+body { font:14px/22px "Microsoft Yahei",Arial,Helvetica; color:#acacac; overflow:visible; margin:0rem auto; min-height:100%; height: 100%; background: #272822; }
+
+a{ text-decoration: none; color: #acacac; }
+a:hover{ text-decoration: underline; color: #0ae; }
+
+/* PC */
+/* css注释：设置了浏览器宽度不小于1001px时 */ 
+@media screen and ( min-width: 701px ) { 
+.body_wp{ width: 800px; margin: 0 auto; padding: 30px 0px 50px; }
+.body_wp .sitename{ font-size: 30px; height: 60px; line-height: 60px; margin-bottom: 14px; }
+
+.shilitu{ padding: 10px 0px; }
+.shilitu p{ line-height: 26px; }
+.shilitu p.danci{ font-size: 26px; color: #a6e22e; font-weight: 700; margin-top: 10px; }
+.shilitu p.yinbiao{ font-size: 20px; font-family: 'lucida sans unicode',arial,sans-serif; font-weight: 700; margin-top: 4px; }
+.shilitu div.miaoshu{ line-height: 18px; margin-top: 10px; }
+.shilitu div.miaoshu p{ line-height: 18px; padding: 4px 0px; }
+.shilitu div.miaoshu strong{ font-family: 'lucida sans unicode',arial,sans-serif; margin-right: 4px; }
+
+.home_ul{ overflow: hidden; }
+.home_ul li{ float: left; width: 33.33%; line-height: 40px; font-size: 16px; }
+
+.t_table_mstitle{ height: 40px; line-height: 40px; font-weight: 700; font-size: 22px; margin-top: 10px; }
+
+.testzhtab{ display: table; border-spacing: 1px; width: 100%; font-size: 14px; margin-top: 10px; }
+.testzhtab th{ background: #000; line-height: 15px; padding: 10px 8px; text-align: left; color: #ededed; }
+.testzhtab th.xulie{ width: 5%; }
+.testzhtab th.danci{ width: 12%; }
+.testzhtab th.cnci{ width: 12%; }
+.testzhtab th.ipayb{ width: 13%; }
+.testzhtab th.usyb{ width: 13%; }
+.testzhtab th.bzsm{ width: 45%; }
+
+
+.testzhtab td{ background: #282923; line-height: 14px; padding: 10px 7px; }
+/*.testzhtab td.leibie{ font-size: 11px; }*/
+.testzhtab td.zimu{ font-size: 16px; }
+.testzhtab td.yinbiao{ font-size: 16px; font-family: 'lucida sans unicode',arial,sans-serif; }
+.testzhtab td.yinbiao bdo{ unicode-bidi: bidi-override; letter-spacing: -0.9px; }
+.testzhtab td.miaoshu{  }
+.testzhtab td.duyin{  }
+.testzhtab td.danci{  }
+.testzhtab td.danci strong{ color: #f9263e; padding: 0px .5px; }
+.testzhtab td em{ font-style: normal; color: #ccc; padding: 0px 3px; }
+
+.testzhtab tr.duanmuyin td{ /*background: #fff3f3;*/ }
+.testzhtab tr.changmuyin td{ background: #383a35; }
+.testzhtab tr.ziyin td{ /*background: #eae6ff;*/ }
+.testzhtab tr.wushengziyin td{ background: #383a35; }
+
+
+.pinduguize{ margin-top: 20px; }
+.pinduguize h3{ height: 40px; line-height: 40px; font-size: 24px; }
+.pinduguize h5{ height: 30px; line-height: 30px; font-size: 20px; }
+.pinduguize h6{ height: 30px; line-height: 30px; font-size: 18px; }
+.pinduguize p b.zim{ font-weight: 700; color: #f9263e; }
+
+.pinduguize p.dancijuli{ line-height: 18px; padding: 8px 0px 0px; /*color: #e6db74;*/ }
+.pinduguize p bdo{ unicode-bidi: bidi-override; }
+
+
+}
+
+/* =+++++++++++++++++++++++++++++++++++++++++豪华分割线+++++++++++++++++++++++++++++++++++++++++= */
+
+/*Mobile*/
+/* 设置了浏览器宽度不大于1000px时 */ 
+@media screen and ( max-width: 700px ) { 
+.body_wp{ width: calc(100% -20px); margin: 0 auto; padding: 10px 10px 30px; }
+.body_wp .sitename{ font-size: 30px; height: 60px; line-height: 60px; margin-bottom: 14px; }
+
+.shilitu{ padding: 10px 0px; }
+.shilitu p{ line-height: 26px; }
+.shilitu p.danci{ font-size: 26px; color: #a6e22e; font-weight: 700; margin-top: 10px; }
+.shilitu p.yinbiao{ font-size: 20px; font-family: 'lucida sans unicode',arial,sans-serif; font-weight: 700; margin-top: 4px; }
+.shilitu div.miaoshu{ line-height: 18px; margin-top: 10px; }
+.shilitu div.miaoshu p{ line-height: 18px; padding: 4px 0px; }
+.shilitu div.miaoshu strong{ font-family: 'lucida sans unicode',arial,sans-serif; margin-right: 4px; }
+
+.home_ul{ overflow: hidden; }
+.home_ul li{ float: left; width: 33.33%; line-height: 40px; font-size: 16px; }
+
+.t_table_mstitle{ height: 40px; line-height: 40px; font-weight: 700; font-size: 22px; margin-top: 10px; }
+
+.testzhtab{ display: table; border-spacing: 1px; width: 100%; font-size: 14px; margin-top: 10px; }
+.testzhtab th{ background: #000; line-height: 15px; padding: 10px 8px; text-align: left; color: #ededed; }
+
+.testzhtab td{ background: #282923; line-height: 14px; padding: 8px 7px; }
+.testzhtab td.leibie{ font-size: 11px; }
+.testzhtab td.zimu{ font-size: 13px; }
+.testzhtab td.yinbiao{ font-size: 13px; font-family: 'lucida sans unicode',arial,sans-serif; }
+.testzhtab td.yinbiao bdo{ unicode-bidi: bidi-override; letter-spacing: -0.9px; }
+.testzhtab td.miaoshu{ font-size: 11px; }
+.testzhtab td.duyin{  }
+.testzhtab td.danci{  }
+.testzhtab td.danci strong{ color: #f9263e; padding: 0px .5px; }
+.testzhtab td em{ font-style: normal; color: #ccc; padding: 0px 3px; }
+
+.testzhtab tr.duanmuyin td{ /*background: #fff3f3;*/ }
+.testzhtab tr.changmuyin td{ background: #383a35; }
+.testzhtab tr.ziyin td{ /*background: #eae6ff;*/ }
+.testzhtab tr.wushengziyin td{ background: #383a35; }
+
+
+.pinduguize{ margin-top: 20px; }
+.pinduguize h3{ height: 40px; line-height: 40px; font-size: 24px; }
+.pinduguize h5{ height: 30px; line-height: 30px; font-size: 20px; }
+.pinduguize h6{ height: 30px; line-height: 30px; font-size: 18px; }
+.pinduguize p b.zim{ font-weight: 700; color: #f9263e; }
+
+.pinduguize p.dancijuli{ line-height: 18px; padding: 8px 0px 0px; /*color: #e6db74;*/ }
+.pinduguize p bdo{ unicode-bidi: bidi-override; }
+
+
+}
+
