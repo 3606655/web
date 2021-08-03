@@ -1,0 +1,19 @@
+
+
+
+/*+++++++++++++++++++++++++++++++++++++*/
+/* 手机模拟器 */
+
+.iphone{ width: 750px; height: 1334px; background: url(../../images/ip6-8-2019/lingqian.png) no-repeat center top; overflow: hidden; color: #000; /*background-repeat: no-repeat; background-size: 100%;*/ font-family:pingfangzhongdeng; }
+
+
+/* 模拟器中心 */
+.i-n-txjine{ text-align: center; color: #000; height: 120px; margin-top: 355px; }
+.i-n-txjine span{ height: 120px; line-height: 120px; font-size: 94px; font-family: Arial; font-weight: bold; text-align: center; background: url(../images/ip6-8-2019/lingqian-q-icon.png) no-repeat left 17px; padding-left: 48px; }
+.i-n-txsqsj{ text-align: center; height: 60px; margin-top: 40px; }
+.i-n-txsqsj p{ height: 60px; line-height: 60px; font-size: 28px; color: #fa9d3b; display: inline-block; background: url(../images/ip6-8-2019/lingqian-q-more.png) no-repeat center right; padding-right: 23px; }
+
+/*+++++++++++++++++++++++++++++++++++++*/
+
+
+

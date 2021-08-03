@@ -1,0 +1,417 @@
+<!DOCTYPE HTML>
+<html>
+  
+<head>
+  <meta charset="UTF-8">
+  <title>2019微信-iPhoneX-收款</title>
+  <meta name="keywords" content=" " />
+  <meta name="description" content=" " />
+  <meta name="renderer" content="webkit">
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <meta content="telephone=no, address=no" name="format-detection">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Bootstrap Core CSS -->
+  <link href="http://static.qhaha.com/project/jietu/bower_components/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom CSS -->
+  <!--  <link href="bower_components/sb-admin-2/css/sb-admin-2.css" rel="stylesheet" type="text/css">
+  <link href="/bower_components/datetimepicker/jquery.datetimepicker.css" rel="stylesheet" type="text/css">
+  <link href="/bower_components/datetimepicker/datetimepicker_blue.css" rel="stylesheet" type="text/css">
+  <link href="/bower_components/datetimepicker/dropdown.css" rel="stylesheet" type="text/css"> -->
+  <link href="/css/public/black-head-ipx.css" rel="stylesheet" type="text/css">
+  <link href="/css/public/common-ipx-2019.css" rel="stylesheet" type="text/css">
+  <link href="/css/ipx/common-shoukuan.css" rel="stylesheet" type="text/css">
+  <style>.modal-dialog{z-index: 2048;} #bglist li{list-style:none; float:left;margin:5px;} #bglist li img{height:200px;}</style>
+  <!-- jQuery -->
+  <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script>var is_check_brower = false;
+    var is_mobile = '';
+    var image_type = 0;
+  </script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="http://static.qhaha.com/project/jietu/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="http://static.qhaha.com/project/jietu/js/bootstrap-datetimepicker.min.js"></script>
+  <script type="text/javascript" src="http://static.qhaha.com/project/jietu/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="http://static.qhaha.com/project/jietu/js/jquery.sglide.js"></script>
+
+  <script type="text/javascript" src="http://static.qhaha.com/project/jietu/js/html2canvas.min.js"></script>
+  <script type="text/javascript" src="http://static.qhaha.com/project/jietu/js/emoji.js"></script>
+  <script type="text/javascript" src="http://static.qhaha.com/project/jietu/js/functions.js"></script>
+  <script type="text/javascript" src="http://static.qhaha.com/project/jietu/js/common-2019.js"></script>
+ 
+</head>
+  
+<body>
+
+<div id="wrapper">
+  <!-- 主体 -->
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="page-header">微信转账详情</h3>
+      </div>
+    </div>
+
+    <div class="row" style="position:relative;padding: 0 15px;">
+
+      <div class="panel-body panel-wx-tab">
+        
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="w1">
+            <div class="setting">
+              <p>
+                <span>信号强度：</span>
+                <select class="slt-common" data-class="i-signal">
+                  <option value="i-signal1">单卡:1格</option>
+                  <option value="i-signal2">单卡:2格</option>
+                  <option value="i-signal3">单卡:3格</option>
+                  <option selected value="i-signal4">单卡:4格</option>
+                  <option value="i-signal5">双卡:上1-下1</option>
+                  <option value="i-signal6">双卡:上1-下2</option>
+                  <option value="i-signal7">双卡:上1-下3</option>
+                  <option value="i-signal8">双卡:上1-下4</option>
+                  <option value="i-signal9">双卡:上2-下1</option>
+                  <option value="i-signal10">双卡:上2-下2</option>
+                  <option value="i-signal11">双卡:上2-下3</option>
+                  <option value="i-signal12">双卡:上2-下4</option>
+                  <option value="i-signal13">双卡:上3-下1</option>
+                  <option value="i-signal14">双卡:上3-下2</option>
+                  <option value="i-signal15">双卡:上3-下3</option>
+                  <option value="i-signal16">双卡:上3-下4</option>
+                  <option value="i-signal17">双卡:上4-下1</option>
+                  <option value="i-signal18">双卡:上4-下2</option>
+                  <option value="i-signal19">双卡:上4-下3</option>
+                  <option value="i-signal20">双卡:上4-下4</option></select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>运营商：</span>
+                <span>网络信号：</span>
+                <select class="slt-common" data-class="i-network">
+                  <option value="">无</option>
+                  <option value="i-n-wifi1">Wifi-1格</option>
+                  <option value="i-n-wifi2">Wifi-2格</option>
+                  <option selected value="i-n-wifi">Wifi-3格</option>                  
+                  <option value="i-n-lte">LTE</option>
+                  <option value="i-n-3g">3G</option>
+                  <option value="i-n-4g">4G</option>
+                  <option value="i-n-5g">5G</option>
+                </select>
+              </p>
+              <p>
+                <span>手机时间：</span>
+                <select class="slt-phone-time slt-p-shi">
+                  <option>-</option>
+                  <option>上午</option>
+                  <option>下午</option></select>
+                <select class="slt-phone-time slt-p-hour"></select>:
+                <select class="slt-phone-time slt-p-minite"></select></p>
+              <!-- <p>
+                <span>定位图标：</span>
+                <label>
+                  <input class="rd-common" data-class="i-top-dir" type="radio" name="top-dir" value="1" checked />显示</label>
+                <label>
+                  <input class="rd-common" data-class="i-top-dir" type="radio" name="top-dir" value="0" />不显示</label></p> -->
+              <div style="margin: 0 0 10px;margin-top: 20px;">
+                <span>电量：</span>
+                <div class="slider_bar"></div>
+              </div>
+              <p>
+                <span>电池状态：</span>
+                <select class="slt-common" data-class="i-top-berry">
+                  <option value="">正常</option>
+                  <option value="i-top-berry2">充电中</option></select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <!-- <span>电池百分比：</span>
+                <label>
+                  <input class="rd-common" data-class="i-top-berry-num" type="radio" name="i-top-berry-num" value="1" checked />显示</label>
+                <label>
+                  <input class="rd-common" data-class="i-top-berry-num" type="radio" name="i-top-berry-num" value="0" />不显示</label> -->
+                <!-- <div style="display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span>听筒模式：</span>
+                  <label>
+                    <input class="rd-common" data-class="i-n-ear" type="radio" name="i-n-ear" value="1" />显示</label>
+                  <label>
+                    <input class="rd-common" data-class="i-n-ear" type="radio" name="i-n-ear" value="0" checked />不显示</label></div> -->
+              </p>           
+              <p>
+                <span>收款金额：</span>
+                <input type="text" value="88.88" data-class="i-n-txjine span" class="input-common" />
+              </p>
+
+              <p>
+                <span>收益率：</span>
+                <input type="text" value="2.47%" data-class="i-n-txsyl span" class="input-common" />
+              </p>
+              <p>
+                <span>转账时间：</span>
+                <input type="text" value="2018-08-08 18:08:08" data-class="i-n-txzzsj span" class="input-common" /> 一般跟到账时间相差2-5分钟左右
+              </p>
+              <p>
+                <span>收钱时间：</span>
+                <input type="text" value="2018-08-08 18:08:08" data-class="i-n-txsksj span" class="input-common datepicker" />
+              </p>             
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="my-btns">
+        <div class="loading">正在生成，请稍候......</div>
+        <!-- <input class="btn btn-primary" type="button" value="生成图片" style="width:200px;" disabled/>
+        <a href="/qrcode-user-vip.html" target="_blank" style="color:red;margin-left:10px;">开通微微VIP后即可生成</a> -->
+        <input id="save" class="btn btn-primary" type="button" value="生成图片" style="width:200px;"/>
+      </div>
+
+      <div class="phone-wrap">
+        <div id="iphone" class="iphonex iphone-preview">
+          <div class="i-top">
+            <div class="i-top-tool">
+              <div class="i-top-left-dw">
+                <span class="i-top-time">00:00</span>
+                <!-- <span class="i-top-dir"></span> -->
+              </div>
+              <div class="i-top-right-dw">
+                <div class="i-signal"></div>
+                <div class="i-network i-n-wifi"></div>              
+                <div class="i-top-berry">
+                  <i>
+                    <em></em>
+                  </i>
+                  <b></b>
+                </div>
+              </div>
+              <!-- <div class="i-top-elm-r i-top-berry-num">50%</div> -->              
+            </div>
+
+          </div>
+          <div class="i-body"> 
+            <div class="i-n-txjine"><span>88.88</span></div>
+            <div class="i-n-txsyl"><p>转入赚收益 七日年化<span>2.47%</span></p></div>   
+
+            <div class="i-n-listcont">
+              <div class="i-n-txzzsj"><span>2018-08-08 18:08:08</span></div>
+              <div class="i-n-txsksj"><span>2018-08-08 18:10:12</span></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="emojiPanel" id="emojiPanel">
+      <ul class="faceTab">
+        <li>
+          <a class="chooseFaceTab" href="javascript:;">QQ表情</a></li>
+        </ul>
+      <div class="faceWrap" style="zoom:1;outline:none;">
+        <div class="faceBox emojiArea"></div>
+      </div>
+    </div>
+  </div>
+  <!-- /主体 -->
+</div>
+
+<!-- 底部 -->
+<div class="pop-pic">
+  <img src="#" />
+  <div class="tips">
+    <p class="tips-mobile">手指按住上面的图片三秒钟保存到手机</p>
+    <p class="tips-pc">请将鼠标移动到上面图片上，然后点击鼠标右键，选择保持图片</p>
+    <a>继续制作</a>
+  </div>
+</div>
+
+
+<iframe id="ifm" frameborder="0" class="hide_ifm" src="/iframe/ipx/shoukuan2019.html"></iframe>
+  
+</body>
+
+<script type="text/javascript">
+
+  //电池滑块
+  function setBar(num){
+    if(num<=20){
+       $('.i-top-berry i em').css('background','#f30');
+    }else{
+       $('.i-top-berry i em').css('background','#000');
+    }
+      $('.i-top-berry i em').css('width',num + '%');
+      num = num.toString();
+      var index = num.toString().lastIndexOf('.');
+      num = index == -1 ? num : num.substring(0,index);
+      $('.i-top-berry-num').text(num + '%');
+  }
+
+  //消息数目
+  // var i_n_count = randomString(1);
+  // if (i_n_count > 0) {
+  //     $('.input-i-n-count').val(i_n_count);
+  //     $('.i-n-count').text(i_n_count);
+  // }
+  // $('.input-i-n-count').bind('input propertychange',
+  // function() {
+  //     var val = $(this).val();
+  //     if (isNaN(val) || val == 0) {
+  //         $('.i-n-count').text('');
+  //         return false;
+  //     }
+  //     val = $(this).val();
+  //     $('.i-n-count').text(val);
+  //     $('.i-n-count').show();
+  // });
+  // $('.btn-del-i-n-count').click(function() {
+  //     $('.i-n-count').hide();
+  //     return false;
+  // });
+
+  // 申请时间&到账时间
+  $(function(){
+      
+       $('.datepicker').datetimepicker({
+        format: 'yyyy-mm-dd hh:ii:ss',
+        language:"zh-CN",
+        minView:2,
+        autoclose:true,
+        //startDate:(new Date()),
+        pickerPosition:'top-right'
+      }).on('changeDate', function(ev){
+        var _this = $(this);
+        _this.keyup();
+      });
+
+      var time = (new Date()).format("yyyy-MM-dd hh:mm:ss");
+      $('.datepicker').val(time);
+      $('.i-n-txsksj span').text(time);
+
+      // var time = (new Date()).format("yyyy-MM-dd hh:mm:ss");
+      // $('.datepicker').val(time);
+      // $('.i-n-txsqsj span').text(time);
+  });  
+
+
+  // 生成图片
+  $(function(){
+    $('.pop-pic .tips a').click(function(){
+      $('.pop-pic').hide();
+      $('#wrapper').show();
+    });
+
+    $('#save').click(function(){
+
+      var _scrT = $('.i-body').scrollTop();
+
+      var _this = $(this);
+      var div = $('#iphone').clone();
+
+      var my_image = $('.my-image');
+      var mask = $('.mask');
+      if(!my_image.length){
+        my_image = $('<div class="my-image">成功生成图片，点击 <a class="my-image-view" target="_blank" href="#">这里</a> 查看，<a class="my-image-continue" href="#">继续制作</a></div>');
+        $('body').append(my_image);
+      }
+      if(!mask.length){
+        $('body').append('<div class="mask"></div>');
+      }
+      div.removeClass('iphone-preview');
+      div.css({
+        zoom:1,
+        position:'absolute',
+        left:0,
+        top:0
+      });
+
+      div.find('.i-body').css({marginTop:"-"+_scrT +"px"});
+        $('#ifm').contents().find('body').append(div);
+        _this.hide();
+        $('.loading').show();
+        $('.my-image').hide();
+        $('.mask').hide();
+
+        html2canvas(div, {
+          onrendered: function(canvas) {
+            var myImage = canvas.toDataURL("image/png");  
+            var pop_pic = $('.pop-pic');
+            var pop_class = 'pc';
+            if(browser.versions.mobile){
+              pop_class = 'mobile';
+            }
+            pop_pic.find('.tips').addClass(pop_class);
+            pop_pic.find('img').attr('src',myImage);
+            pop_pic.show();
+            $('#wrapper').hide();
+            $('.loading').hide();
+            _this.show();
+            div.remove();
+          }
+      });
+      return false;
+  });
+
+
+  // 聊天背景图
+  var set_body_bg = function() {
+      var img = $('.a-u-pic-bodybg img');
+      var src = img.attr('src');
+      $('.i-hbao-face').css('background-image', 'url(' + src + ')');
+      // $('.i-body').addClass("bg-body");
+  }
+    
+
+  // 聊天背景图片上传
+  $('body').on('change', '.a-u-pic-show input',
+  function() {
+      var img = document.createElement('img'); //创建 img 对象
+      var _this = $(this);
+      var callback = _this.attr('data-callback');
+
+      window.URL = window.URL || window.webkitURL;
+
+      var imgFile = $(this).get(0);
+
+      if (window.URL && imgFile.files[0]) {
+          var reader = new FileReader();
+          reader.readAsDataURL(imgFile.files[0]);
+          reader.onload = function(e) {
+              var img = '<img src="' + this.result + '" alt=""/>';
+              _this.parent().find('img').remove();
+              _this.parent().append(img);
+
+              if (callback) {
+                  eval(callback + '()');
+              }
+          }
+      }
+  });
+
+
+  /*背景选择*/
+  // $(".btn-bgModal").click(function(){
+  //   var _arr = ['/images/bg/12.jpeg','/images/bg/13.jpeg','/images/bg/11.jpeg','/images/bg/10.jpeg','/images/bg/9.jpeg','/images/bg/8.jpeg','/images/bg/7.jpeg','/images/bg/6.jpeg','/images/bg/5.jpeg','/images/bg/4.jpeg','/images/bg/2.jpeg','/images/bg/3.jpeg','/images/bg/1.png','/images/bg/1.jpeg'];
+  //   var _html = '<ul>';
+  //   for(var i in _arr){
+  //     _html +=  '<li><a href="javascript:void(0);"><img src="'+_arr[i]+'" ></a></li>';
+  //   }
+  //   _html += '</ul>';
+  //   //选择背景
+  //   _html = $(_html)
+  //   _html.find('img').click(function(){
+  //     var src = $(this).attr('src');
+  //     $('.a-u-pic-bodybg img').attr("src",src);
+  //     $('.i-body').css('background-image','url(' + src + ')');
+  //     $('.i-body').addClass("bg-body");
+      
+  //   });
+  //   $("#bglist").html(_html);
+  // });
+
+  /* $('.i-body').DDSort({
+      target: '.i-b-rec-text,.i-b-sen-text,.i-b-time'
+  });*/
+
+  });  
+
+</script>
+
+
+
+</html>

@@ -1,0 +1,968 @@
+<!DOCTYPE HTML>
+<html>
+  
+<head>
+  <meta charset="UTF-8">
+  <title>2019微信对话生成在线制作</title>
+  <meta name="keywords" content=" " />
+  <meta name="description" content=" " />
+  <meta name="renderer" content="webkit">
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <meta content="telephone=no, address=no" name="format-detection">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Bootstrap Core CSS -->
+  <link href="http://static.qhaha.com/project/jietu/bower_components/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <!-- MetisMenu CSS -->
+  <!-- <link href="/bower_components/metisMenu/metisMenu.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Custom CSS -->
+  <!--  <link href="bower_components/sb-admin-2/css/sb-admin-2.css" rel="stylesheet" type="text/css"> -->
+  <!-- Custom Fonts -->
+  <!-- <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="/bower_components/datetimepicker/jquery.datetimepicker.css" rel="stylesheet" type="text/css">
+  <link href="/bower_components/datetimepicker/datetimepicker_blue.css" rel="stylesheet" type="text/css">
+  <link href="/bower_components/datetimepicker/dropdown.css" rel="stylesheet" type="text/css"> -->
+  <link href="/css/public/black-head-ipx.css" rel="stylesheet" type="text/css">
+  <link href="/css/public/common-ipx-2019.css" rel="stylesheet" type="text/css">
+  <link href="/css/ipx/common-im.css" rel="stylesheet" type="text/css">
+  <style>.modal-dialog{z-index: 2048;} #bglist li{list-style:none; float:left;margin:5px;} #bglist li img{height:200px;}</style>
+  <!-- jQuery -->
+  <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script>var is_check_brower = false;
+    var is_mobile = '';
+    var image_type = 0;
+  </script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="http://static.qhaha.com/project/jietu/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="http://static.qhaha.com/project/jietu/js/jquery.sglide.js"></script>
+  <script type="text/javascript" src="http://static.qhaha.com/project/jietu/js/html2canvas.min.js"></script>
+  <script type="text/javascript" src="http://static.qhaha.com/project/jietu/js/emoji.js"></script>
+  <script type="text/javascript" src="http://static.qhaha.com/project/jietu/js/functions.js"></script>
+  <script type="text/javascript" src="http://static.qhaha.com/project/jietu/js/common-2019.js"></script>
+  <script>$(function() {
+      $('#btn-menu').click(function() {
+        $('.sidebar-nav').toggle();
+      });
+    });
+  </script>
+</head>
+  
+<body>
+
+<div id="wrapper">
+  <!-- 主体 -->
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="page-header">微信对话生成 -
+          <small style="color:#f30">可滚动聊天记录</small></h3>
+      </div>
+    </div>
+
+    <div class="row" style="position:relative;padding: 0 15px;">
+
+      <div class="panel-body panel-wx-tab">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">              
+          <li class="active"><a href="#w1" data-toggle="tab">外观设置</a></li>
+          <li><a href="#w2" data-toggle="tab">对话设置</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="w1">
+            <div class="setting">
+              <p>
+                <span>信号强度：</span>
+                <select class="slt-common" data-class="i-signal">
+                  <option value="i-signal1">1格</option>
+                  <option value="i-signal2">2格</option>
+                  <option value="i-signal3">3格</option>
+                  <option selected value="i-signal4" value="i-signal4">4格</option></select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>运营商：</span>
+                <select class="slt-common" data-class="i-carrier">
+                  <option value="i-c-yd">中国移动</option>
+                  <option value="i-c-lt">中国联通</option>
+                  <option value="i-c-dx">中国电信</option></select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>网络信号：</span>
+                <select class="slt-common" data-class="i-network">
+                  <option value="">无</option>
+                  <option value="i-n-wifi1">Wifi-1格</option>
+                  <option value="i-n-wifi2">Wifi-2格</option>
+                  <option selected value="i-n-wifi">Wifi-3格</option>
+                  <option value="i-n-g">G</option>
+                  <option value="i-n-e">E</option>
+                  <option value="i-n-3g">3G</option>
+                  <option value="i-n-4g">4G</option>
+                  <option value="i-n-lte">LTE</option>
+                </select>
+              </p>
+              <p>
+                <span>手机时间：</span>
+                <select class="slt-phone-time slt-p-shi">
+                  <option>-</option>
+                  <option>上午</option>
+                  <option>下午</option></select>
+                <select class="slt-phone-time slt-p-hour"></select>:
+                <select class="slt-phone-time slt-p-minite"></select></p>
+              <p>
+                <span>锁定旋转：</span>
+                <label>
+                  <input class="rd-common" data-class="i-top-dir" type="radio" name="top-dir" value="1" checked />显示</label>
+                <label>
+                  <input class="rd-common" data-class="i-top-dir" type="radio" name="top-dir" value="0" />不显示</label></p>
+              <div style="margin: 0 0 10px;margin-top: 20px;">
+                <span>电量：</span>
+                <div class="slider_bar"></div>
+              </div>
+              <p>
+                <span>电池状态：</span>
+                <select class="slt-common" data-class="i-top-berry">
+                  <option value="">正常</option>
+                  <option value="i-top-berry2">充电中</option></select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>电池百分比：</span>
+                <label>
+                  <input class="rd-common" data-class="i-top-berry-num" type="radio" name="i-top-berry-num" value="1" checked />显示</label>
+                <label>
+                  <input class="rd-common" data-class="i-top-berry-num" type="radio" name="i-top-berry-num" value="0" />不显示</label>
+                <div style="display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span>听筒模式：</span>
+                  <label>
+                    <input class="rd-common" data-class="i-n-ear" type="radio" name="i-n-ear" value="1" />显示</label>
+                  <label>
+                    <input class="rd-common" data-class="i-n-ear" type="radio" name="i-n-ear" value="0" checked />不显示</label></div>
+              </p>
+              <p>
+                <span>聊天模式：</span>
+                <select class="slt-common" data-class="i-n-user">
+                  <option value="">单聊</option>
+                  <option value="i-n-user-group">群聊</option></select>
+              </p>
+              <p>
+                <span>聊天标题：</span>
+                <input type="text" value="duang~~~" data-class="i-n-name span" class="input-common" />群聊模式(括号)里是群聊人数</p>
+              <p>
+                <span>消息数目：</span>
+                <input type="text" value="" class="input-i-n-count" />
+                <a class="btn-del-i-n-count" href="#">删除数目</a></p>
+              <p>
+                <span>显示用户昵称：</span>
+                <label>
+                  <input class="rd-common radio-i-b-nick" data-class="i-b-nick" type="radio" name="i-b-nick" value="0" checked />不显示</label>
+                <label>
+                  <input class="rd-common radio-i-b-nick" data-class="i-b-nick" type="radio" name="i-b-nick" value="1" />显示</label></p>
+              <p>
+                <span>底部输入框：</span>
+                <select class="slt-common" data-class="i-bottom">
+                  <option value="">文本模式</option>
+                  <option value="i-bottom2">语音模式</option></select>
+              </p>
+              <div style="overflow:hidden;margin:20px 0 40px 0;">
+                <div class="a-u-pic a-u-pic-bodybg">
+                  <div class="a-u-pic-show">
+                    <input type="file" data-callback="set_body_bg" accept="image/jpeg,image/x-png"></div>
+                </div>
+                <div>背景图片
+                  <span style="color:#f00">(图片大小:宽640 x 高1136)</span>
+                  <br/>
+                  <button type="button" class="btn btn-primary btn-bgModal" data-toggle="modal" data-target="#bgModal">选择背景</button>
+                  <br/>
+                  <a class="body_bg_del btn btn-danger btn_no_water" href="#">删除背景</a></div>
+                <!-- #bgModal -->
+                <div class="modal fade" id="bgModal" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">选择背景</h4></div>
+                      <div class="modal-body">
+                        <div id="bglist">
+                          <!--li><a href="javascript:void(0);"><img src="static/images/bg/1.jpeg" ></a></li--></div>
+                        <div style="clear:both"></div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="w2">
+            <div class="setting">
+              <div style="border-bottom:1px #ccc dotted;padding-bottom:10px;clear:both">
+                <p style="border-bottom:1px #ccc dotted;padding-bottom:10px;">
+                  <span>添加聊天时间：</span>
+                  <select class="slt-year">
+                    <option>-</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
+                    <option>2016</option>
+                    <option>2015</option>
+                    <option>2014</option>
+                    <option>2020</option></select>
+                  <select class="slt-month">
+                    <option>-</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option></select>
+                  <select class="slt-day">
+                    <option>-</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+                  </select>
+                  <select class="slt-xinqi">
+                    <option>-</option>
+                    <option>星期一</option>
+                    <option>星期二</option>
+                    <option>星期三</option>
+                    <option>星期四</option>
+                    <option>星期五</option>
+                    <option>星期六</option>
+                    <option>星期日</option>
+                  </select>
+                  <select class="slt-shi">
+                    <option>-</option>
+                    <option>昨天</option>
+                    <option>上午</option>
+                    <option>下午</option>
+                    <option>凌晨</option>
+                  </select>
+                  <select class="slt-hour"></select>:
+                  <select class="slt-minite"></select>
+                  <a class="add-time-btn btn btn-primary btn-sm" href="#">添加</a>
+                </p>
+                <div style="clear:both"></div>
+              </div>
+              <div class="users">
+                <div class="add-user">
+                  <div class="a-u-pic">
+                    <div class="a-u-pic-show">
+                      <input type="file" accept="image/jpeg,image/x-png" /></div>
+                  </div>
+                  <div class="a-u-name">
+                    <p>
+                      <span>用户名：</span>
+                      <input class="a-u-data-name" type="text" value="" /></p>
+                    <p>
+                      <span>聊天内容：</span>
+                      <textarea class="a-u-content">欢迎使用搞笑微信对话</textarea>
+                      <a class="a-u-face btn-add-face" data-input="a-u-content" href="#">表情</a></p> 
+                    <p>
+                      <span>转账/收钱金额：</span>
+                      <input class="a-u-data-pay" type="text" value="88.88" /></p>
+                    <p>
+                      <span>红包标题：</span>
+                      <input class="a-u-data-wenc" type="text" value="恭喜发财，大吉大利" /></p>
+                    <p>
+                      <span>语音时间：</span>
+                      <input class="a-u-data-voice" type="text" value="10" /></p>
+                    <p>
+                      <span>谁领了你红包：</span>
+                      <input class="a-u-data-hongbao" type="text" value="" /></p>
+                    </p>
+                    <p>
+                      <input style="margin-right:5px;" class="btn-rand-username" type="button" value="随机用户名" />
+                      <input class="btn-rand-face" type="button" value="随机头像" /></p>
+                    <p>
+                      <span>图片对话：</span></p>
+                    <div class="a-u-pic-pic">
+                      <div class="a-u-pic-show-pic">
+                        <input type="file" class="a-u-data-pic" accept="image/jpeg,image/x-png"></div>
+                    </div>
+                  </div>
+                  <div class="a-u-dialog" style="clear:both;">
+                    <a class="btn btn-primary" data-type="left" href="#">添加【文字】</a></div>
+                  <div class="a-u-dialog-pic">
+                    <a class="btn btn-info" data-type="left" href="#">添加【图片】</a></div>
+                  <div class="a-u-dialog-voice">
+                    <a class="btn btn-primary" data-type="left" href="#">添加【语音】</a></div>
+
+                  
+                  <div class="a-u-dialog-wenc">
+                    <a class="btn btn-primary" data-type="left" href="#">添加【发红包】</a></div>
+                  <div class="a-u-dialog-wenc2">
+                    <a class="btn btn-primary" data-type="left" href="#">添加【领红包】</a></div>
+                  <div class="a-u-dialog-hongbao">
+                    <a class="btn btn-info" data-type="left" href="#">领红包提示</a></div>
+
+                  <div class="a-u-dialog-pay">
+                    <a class="btn btn-primary" data-dir="send" data-type="left" href="#">添加【转账】</a></div>                  
+                  <div class="a-u-dialog-pay">
+                    <a class="btn btn-primary" data-dir="rec" data-type="left" href="#">添加【收钱】</a></div>
+
+                  
+
+                  <div class="a-u-dialog-master">
+                    <a class="btn btn-primary btn-success" href="#">设为主人</a></div>
+                  <div class="a-u-dialog-del">
+                    <a class="btn btn-danger" href="#">删除用户</a></div>
+                </div>
+              </div>
+              <div class="btns">
+                <input id="add-user" class="btn btn-success" type="button" value="添加用户" />
+                <input class="btn btn-success clear-dialog" type="button" value="清除对话" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-btns">
+        <div class="loading">正在生成，请稍候......</div>
+        <!-- <input class="btn btn-primary" type="button" value="生成图片" style="width:200px;" disabled/>
+        <a href="/qrcode-user-vip.html" target="_blank" style="color:red;margin-left:10px;">开通微微VIP后即可生成</a> -->
+        <input id="save" class="btn btn-primary" type="button" value="生成图片" style="width:200px;"/>
+      </div>
+
+      <div class="phone-wrap">
+        <div id="iphone" class="iphone iphone-preview">
+          <div class="i-top">
+            <div class="i-top-tool">
+              <div class="i-top-left-dw">
+                <span class="i-top-time">00:00</span>
+                <!-- <span class="i-top-dir"></span> -->
+              </div>
+              <div class="i-top-right-dw">
+                <div class="i-signal"></div>
+                <div class="i-network i-n-wifi"></div>              
+                <div class="i-top-berry">
+                  <i>
+                    <em></em>
+                  </i>
+                  <b></b>
+                </div>
+              </div>
+              <!-- <div class="i-top-elm-r i-top-berry-num">50%</div> -->              
+            </div>
+            <div class="i-nav">
+              <div class="i-n-back">
+                <div class="i-n-count"></div>
+              </div>
+              <div class="i-n-name">
+                <span>duang~~~</span>
+                <i class="i-n-ear" style="display:none">&nbsp;</i></div>
+              <div class="i-n-user"></div>
+            </div>
+          </div>
+          <div class="i-body">
+            <div class="i-b-time">
+              <span>星期五 下午2:27</span>
+              <a class="msg-del"></a>
+            </div>
+            <div class="i-b-sen-text">
+              <img src="/images/face/10049.jpg">
+              <span class="wx-img-box"></span>
+              <div>
+                <span>
+                  <i>
+                  </i>
+                  <em>亲，这个怎么用</em>
+                  <a class="msg-del"></a>
+                </span>
+              </div>
+            </div>
+            <div class="i-b-rec-text">
+              <img src="/images/face/10060.jpg">
+              <span class="wx-img-box"></span>
+              <div>
+                <p class="i-b-nick">马克_SHI</p>
+                <span>
+                  <i>
+                  </i>
+                  <em>这个是示例对话哦，你先点击下面绿色的“清除对话”按钮，然后切换到对话设置那里，添加你要的对话类型就行了，需要多个用户进行对话请点击“添加用户”按钮添加用户，然后添加对话即可</em>
+                  <a class="msg-del"></a>
+                </span>
+              </div>
+            </div>
+            <div class="i-b-sen-text">
+              <img src="/images/face/10049.jpg">
+              <span class="wx-img-box"></span>
+              <div>
+                <span>
+                  <i>
+                  </i>
+                  <em>好哒，谢谢你，我操作试试看</em>
+                  <a class="msg-del"></a>
+                </span>
+              </div>
+            </div>
+
+          </div>
+          <div class="i-bottom">
+            <div class="i-b-we-cent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="emojiPanel" id="emojiPanel">
+      <ul class="faceTab">
+        <li>
+          <a class="chooseFaceTab" href="javascript:;">QQ表情</a></li>
+        </ul>
+      <div class="faceWrap" style="zoom:1;outline:none;">
+        <div class="faceBox emojiArea"></div>
+      </div>
+    </div>
+  </div>
+  <!-- /主体 -->
+</div>
+
+<!-- 底部 -->
+<div class="pop-pic">
+  <img src="#" />
+  <div class="tips">
+    <p class="tips-mobile">手指按住上面的图片三秒钟保存到手机</p>
+    <p class="tips-pc">请将鼠标移动到上面图片上，然后点击鼠标右键，选择保持图片</p>
+    <a>继续制作</a>
+  </div>
+</div>
+
+
+<iframe id="ifm" frameborder="0" class="hide_ifm" src="/iframe/ipx/im2019.html"></iframe>
+  
+</body>
+
+<script type="text/javascript">
+
+  //电池滑块
+  function setBar(num){
+    if(num<=20){
+       $('.i-top-berry i em').css('background','#f30');
+    }else{
+       $('.i-top-berry i em').css('background','#000');
+    }
+      $('.i-top-berry i em').css('width',num + '%');
+      num = num.toString();
+      var index = num.toString().lastIndexOf('.');
+      num = index == -1 ? num : num.substring(0,index);
+      $('.i-top-berry-num').text(num + '%');
+  }
+
+  //消息数目
+  var i_n_count = randomString(1);
+  if (i_n_count > 0) {
+      $('.input-i-n-count').val(i_n_count);
+      $('.i-n-count').text(i_n_count);
+  }
+  $('.input-i-n-count').bind('input propertychange',
+  function() {
+      var val = $(this).val();
+      if (isNaN(val) || val == 0) {
+          $('.i-n-count').text('');
+          return false;
+      }
+      val = $(this).val();
+      $('.i-n-count').text(val);
+      $('.i-n-count').show();
+  });
+  $('.btn-del-i-n-count').click(function() {
+      $('.i-n-count').hide();
+      // $('.i-n-count').text('');
+      //$('.input-i-n-count').val('');
+      return false;
+  });
+
+
+  //添加聊天内容
+  $('body').on('click', '.a-u-dialog a',
+  function() {
+      var user = $(this).parents('.add-user');
+      var index = user.index();
+      var name = user.find('.a-u-name .a-u-data-name').val();
+      var content = user.find('.a-u-name textarea').val();
+      var img = $(this).parent().parent().find('.a-u-pic-show img').clone();
+      var type = user.find('.a-u-dialog-master a').hasClass('btn-success');
+
+      if (name == '') {
+          alert('请输入用户名！');
+          return false;
+      }
+
+      if (content == '') {
+          alert('请输入聊天内容！');
+          return false;
+      }
+
+      if (!img.length) {
+          img = '<img src="images/default-head.png" />';
+      }
+
+      content = replace_qq_emoji(content);
+
+      var msg_class = type ? 'i-b-sen-text': 'i-b-rec-text';
+      var nick = type ? '': '<p class="i-b-nick">' + name + '</p>';
+
+      var dialog = $('<div class="' + msg_class + '"><span class="wx-img-box"></span><div>' + nick + '<span><i></i><em>' + content + '</em><a class="msg-del"></a></span></div></div>');
+      dialog.prepend(img);
+      $('.i-body').append(dialog);
+
+      //显示名称
+      $(".radio-i-b-nick:checked").click();
+      return false;
+  });
+
+
+  //添加聊天时间
+  $('.add-time-btn').click(function() {
+      var year = $('.slt-year option:selected').val();
+      var month = $('.slt-month option:selected').val();
+      var day = $('.slt-day option:selected').val();
+      var xinqi = $('.slt-xinqi option:selected').val();
+      var shi = $('.slt-shi option:selected').val();
+      var hour = $('.slt-hour option:selected').val();
+      var minite = $('.slt-minite option:selected').val();
+      var str = '';
+      if (year != '-') str += year + '年';
+      if (month != '-') str += month + '月';
+      if (day != '-') str += day + '日 ';
+
+      if (xinqi != '-') str += xinqi + ' ';
+      if (shi != '-') str += shi;
+      str += ' ' + hour + ':';
+      str += minite;
+      var html = '<div class="i-b-time"><span>' + str + '</span><a class="msg-del"></a></div>';
+      $('.i-body').append(html);
+      return false;
+  });
+
+
+  //添加用户
+  $('#add-user').click(function() {
+      var time = (new Date()).valueOf();
+      var html = $('<div class="add-user"><div class="a-u-pic"><div class="a-u-pic-show"><input type="file" accept="image/jpeg,image/x-png" /></div></div><div class="a-u-name"><p><span>用户名：</span><input class="a-u-data-name" type="text" value="" /></p><p><span>聊天内容：</span><textarea class="a-u-content' + time + '">我是回复内容</textarea><a class="a-u-face btn-add-face" data-input="a-u-content' + time + '" href="#">表情</a></p><p><span>转账/收钱金额：</span><input class="a-u-data-pay" type="text" value="52.00" /></p><p><span>红包标题：</span><input class="a-u-data-wenc" type="text" value="恭喜发财，大吉大利" /></p><p><span>语音时间：</span><input class="a-u-data-voice" type="text" value="12" /></p><p><span>领了谁红包：</span><input class="a-u-data-hongbao" type="text" value="" /></p><p><input style="margin-right:5px;" class="btn-rand-username" type="button" value="随机用户名" /><input class="btn-rand-face" type="button" value="随机头像" /></p><p><span>图片对话：</span></p><div class="a-u-pic-pic"><div class="a-u-pic-show-pic"><input type="file" class="a-u-data-pic" accept="image/jpeg,image/x-png"></div></div></div><div class="a-u-dialog" style="clear:both;"><a class="btn btn-primary" data-type="left" href="#">添加【文字】</a></div><div class="a-u-dialog-pic"><a class="btn btn-info" data-type="left" href="#">添加【图片】</a></div><div class="a-u-dialog-voice"><a class="btn btn-primary" data-type="left" href="#">添加【语音】</a></div><div class="a-u-dialog-wenc"><a class="btn btn-primary" data-type="left" href="#">添加【发红包】</a></div><div class="a-u-dialog-wenc2"><a class="btn btn-primary" data-type="left" href="#">添加【领红包】</a></div><div class="a-u-dialog-hongbao"><a class="btn btn-info" data-type="left" href="#">领红包提示</a></div><div class="a-u-dialog-pay"><a class="btn btn-primary" data-dir="send" data-type="left" href="#">添加【转账】</a></div><div class="a-u-dialog-pay"><a class="btn btn-primary" data-dir="rec" data-type="left" href="#">添加【收钱】</a></div><div class="a-u-dialog-master"><a class="btn btn-primary" href="#">设为主人</a></div><div class="a-u-dialog-del"><a class="btn btn-danger" href="#">删除用户</a></div></div>');
+      $('.users').append(html);
+      html.find('.btn-rand-username').click();
+  });
+
+
+  //删除用户
+  $('body').on('click', '.a-u-dialog-del',
+  function() {
+      if (confirm('您确认要删除？')) {
+          $(this).parents('.add-user').remove();
+      }
+      return false;
+  });
+
+
+  //清除所有对换
+  $('body').on('click', '.msg-del',
+  function() {
+      $(this).parents('.i-b-time,.i-b-rec-text,.i-b-sen-text').remove();
+  });
+
+  $('.clear-dialog').click(function() {
+      if (confirm('您确认要清除所有对话？')) {
+          $('.i-b-time,.i-b-rec-text,.i-b-sen-text').remove();
+      }
+  });
+
+
+  //添加转账对话
+  $('body').on('click', '.a-u-dialog-pay a',
+  function() {
+      var dir = $(this).attr('data-dir');
+      var user = $(this).parents('.add-user');
+      var type = user.find('.a-u-dialog-master a').hasClass('btn-success');
+      var index = user.index();
+      var name = user.find('.a-u-name .a-u-data-name').val();
+      var pay = user.find('.a-u-name .a-u-data-pay').val();
+      var img = $(this).parent().parent().find('.a-u-pic-show img').clone();
+      var _get_pay = $("input[name='radio-i-b-pay']:checked").val();
+
+      if (name == '') {
+          alert('请输入用户名！');
+          return false;
+      }
+
+      if (pay == '') {
+          alert('请输入转账/收钱金额！');
+          return false;
+      }
+
+      if (isNaN(pay)) {
+          alert('您输入的金额有误！');
+          return false;
+      }
+
+      if (!img.length) {
+          img = '<img src="images/default-head.png" />';
+      }
+
+      var wrap_class = !type ? 'i-b-rec-text': 'i-b-sen-text';
+      var pay_class = dir == 'send' ? 'i-pay-send': 'i-pay-rec';
+      var pay_class2 = _get_pay == "1" ? 'i-b-pay': 'i-b-pay2';
+
+      var nick = type ? '' : '<p class="i-b-nick">' + name + '</p>';
+      var nick2 = dir == 'send' ? '<p class="i-b-nick2">转账给' + name + '</p>': '<p class="i-b-nick2">已收钱</p>';
+
+      var html = $('<div class="' + wrap_class + '"><span class="wx-img-box"></span><div class="' + pay_class2 + '">' + nick + '<span class="' + pay_class + '">' + nick2 + '<em style="z-index:10">' + toDecimal2(pay) + '</em><i></i><a class="msg-del"></a></span></div></div>');
+      html.prepend(img);
+      $('.i-body').append(html);
+      //显示名称
+      //$(".radio-i-b-nick:checked").click();
+      return false;
+  });
+
+
+  //添加发红包
+  $('body').on('click', '.a-u-dialog-wenc a',
+  function() {
+      var user = $(this).parents('.add-user');
+      var index = user.index();
+      var name = user.find('.a-u-name .a-u-data-name').val();
+      var wenc = user.find('.a-u-name .a-u-data-wenc').val();
+      var img = $(this).parent().parent().find('.a-u-pic-show img').clone();
+      var type = user.find('.a-u-dialog-master a').hasClass('btn-success');
+
+      if (name == '') {
+          alert('请输入用户名！');
+          return false;
+      }
+
+      if (wenc == '') {
+          alert('请输入红包标题！');
+          return false;
+      }
+
+      if (!img.length) {
+          img = '<img src="images/default-head.png" />';
+      }
+
+      // content = replace_qq_emoji(content);
+
+      var msg_class = type ? 'i-b-sen-text': 'i-b-rec-text';
+      var nick = type ? '': '<p class="i-b-nick">' + name + '</p>';
+
+      var dialog = $('<div class="' + msg_class + '"><span class="wx-img-box"></span><div class="i-b-fhbao">' + nick + '<span class="i-fhbao-send"><em style="z-index:10">' + wenc + '</em><i></i><a class="msg-del"></a></span></div></div>');
+
+      dialog.prepend(img);
+      $('.i-body').append(dialog);
+
+      //显示名称
+      $(".radio-i-b-nick:checked").click();
+      return false;      
+  });
+
+  //添加领红包
+  $('body').on('click', '.a-u-dialog-wenc2 a',
+  function() {
+      var user = $(this).parents('.add-user');
+      var index = user.index();
+      var name = user.find('.a-u-name .a-u-data-name').val();
+      var wenc2 = user.find('.a-u-name .a-u-data-wenc').val();
+      var img = $(this).parent().parent().find('.a-u-pic-show img').clone();
+      var type = user.find('.a-u-dialog-master a').hasClass('btn-success');
+
+      if (name == '') {
+          alert('请输入用户名！');
+          return false;
+      }
+
+      if (wenc2 == '') {
+          alert('请输入红包标题！');
+          return false;
+      }
+
+      if (!img.length) {
+          img = '<img src="images/default-head.png" />';
+      }
+
+      // content = replace_qq_emoji(content);
+
+      var msg_class = type ? 'i-b-sen-text': 'i-b-rec-text';
+      var nick = type ? '': '<p class="i-b-nick">' + name + '</p>';
+
+      var dialog = $('<div class="' + msg_class + '"><span class="wx-img-box"></span><div class="i-b-fhbao"><p class="i-b-nick2">已领取</p><span class="i-fhbao-rec"><em style="z-index:10">' + wenc2 + '</em><i></i><a class="msg-del"></a></span></div></div>');
+
+      dialog.prepend(img);
+      $('.i-body').append(dialog);
+
+      //显示名称
+      $(".radio-i-b-nick:checked").click();
+      return false;      
+  });
+
+
+  //添加语音对话
+  $('body').on('click', '.a-u-dialog-voice a',
+  function() {
+      var user = $(this).parents('.add-user');
+      var name = user.find('.a-u-name .a-u-data-name').val();
+      var img = $(this).parent().parent().find('.a-u-pic-show img').clone();
+      var voice = user.find('.a-u-name .a-u-data-voice').val();
+      var type = user.find('.a-u-dialog-master a').hasClass('btn-success');
+
+      if (name == '') {
+          alert('请输入用户名！');
+          return false;
+      }
+
+      if (voice == '') {
+          alert('请输入语音时间！');
+          return false;
+      }
+
+      if (isNaN(voice)) {
+          alert('您输入的语音时间有误！');
+          return false;
+      }
+
+      if (!img.length) {
+          img = '<img src="images/default-head.png" />';
+      }
+
+      var wrap_class = !type ? 'i-b-rec-text': 'i-b-sen-text';
+      var nick = type ? '': '<p class="i-b-nick">' + name + '</p>';
+
+      var v_len = 0;
+      var len = 0;
+      v_len = voice > 60 ? 60 : voice;
+      len = (380 - 140) / 60 * v_len + 140;
+
+      var unread = ''; //type ? '' : '<strong></strong>';
+      var html = $('<div class="' + wrap_class + '"><span class="wx-img-box"></span><div class="i-b-voice">' + nick + '<span style="width:' + len + 'px"><i></i><b></b><em>' + voice + '</em>' + unread + '<a class="msg-del"></a></span></div></div>');
+
+      html.prepend(img);
+      $('.i-body').append(html);
+      //显示名称
+      $(".radio-i-b-nick:checked").click();
+      return false;
+  });
+
+
+  //添加图片对话
+  Function("‌‌‌‌‍‌‍‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‍‍‌‌‍‍‌‌‍‍‍‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‌‍‍‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‍‌‍‍‌‍‍‍‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‍‍‌‌‌‍‌‌‍‍‌‍‍‍‍‌‍‍‌‌‍‌‌‌‍‍‍‍‌‌‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‍‌‍‍‌‍‍‍‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‌‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‍‍‌‍‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‌‍‌‍‍‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‍‌‍‌‍‌‌‍‌‍‍‌‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‌‍‌‍‍‌‍‌‍‍‍‌‌‍‍‌‍‍‌‍‌‌‌‌‍‍‌‍‍‍‍‌‍‍‍‌‍‍‍‌‌‍‌‍‍‌‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‌‌‍‍‍‌‌‌‌‌‍‍‍‌‍‌‍‌‍‍‍‌‍‌‌‌‌‍‌‌‍‍‍‌‌‍‌‍‍‌‌‌‌‌‌‍‌‍‌‌‍‍‌‌‍‍‌‌‍‍‍‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‌‍‍‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‍‌‍‍‌‍‍‍‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‍‍‌‌‍‌‌‌‍‍‌‍‍‍‍‌‍‍‌‌‌‍‍‌‍‍‍‌‍‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‍‌‍‌‌‌‌‍‌‍‍‍‌‌‍‍‌‌‌‍‍‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‍‌‍‌‍‌‌‌‍‌‍‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‌‍‍‍‍‍‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‍‍‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‍‍‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‌‌‌‍‍‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‍‍‌‌‌‍‍‌‌‌‍‌‌‍‍‌‌‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‍‌‍‍‍‍‍‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‍‍‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‍‌‌‍‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‍‍‌‌‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‌‌‌‍‍‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‍‍‌‌‌‍‍‌‌‌‍‌‌‍‍‌‌‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‍‍‍‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‍‍‌‍‍‍‍‌‍‍‍‌‍‍‍‌‌‍‌‍‍‍‌‌‍‌‍‌‍‌‍‌‍‌‍‌‌‍‌‌‍‌‌‍‍‌‌‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‍‍‍‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‍‍‌‍‍‍‍‌‍‍‍‌‍‍‍‌‌‍‌‍‍‍‌‌‍‌‍‌‍‌‍‌‍‌‍‌‌‍‌‌‍‌‌‍‍‌‌‌‌‍‌‌‌‌‌‌‍‍‍‍‍‌‌‌‍‍‍‍‍‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‍‍‌‍‍‍‍‌‍‍‍‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‍‌‍‍‍‌‍‍‌‌‍‌‍‌‍‍‌‌‌‍‌‌‍‍‌‍‌‍‍‌‍‍‌‍‌‌‍‌‍‍‍‌‍‌‌‌‍‌‍‌‍‌‍‌‍‌‍‌‌‍‌‌‍‌‌‍‍‌‌‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‍‌‌‌‍‍‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‍‍‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‍‍‌‍‍‌‌‍‌‍‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‍‌‌‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‌‌‌‍‌‌‌‌‌‌‌‍‌‍‌‌‌‌‍‍‍‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‍‍‌‍‍‍‍‌‍‍‍‌‍‍‍‌‌‍‌‍‍‍‌‌‍‌‍‌‍‌‍‌‍‌‍‌‌‍‌‌‍‌‌‍‍‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‌‌‌‍‌‌‍‍‌‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‍‌‌‌‍‍‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‍‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‍‌‍‌‍‍‌‍‍‌‌‍‍‌‌‌‌‌‍‌‍‍‍‌‍‌‌‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‌‌‌‍‌‍‍‌‌‍‌‌‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‍‌‍‍‍‌‍‍‍‌‌‍‌‌‌‌‌‌‍‌‌‌‍‍‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‍‌‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‌‌‌‍‌‍‍‌‌‍‌‌‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‌‍‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‌‍‍‍‍‍‌‌‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‌‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‍‌‍‍‍‌‍‍‍‌‌‍‌‌‌‌‌‌‍‌‌‌‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‍‌‍‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‍‍‌‍‍‌‌‍‌‍‌‍‍‍‌‍‌‌‌‍‌‍‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‍‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‌‌‌‍‌‍‍‌‌‍‌‌‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‌‌‌‍‌‍‍‍‌‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‌‌‌‍‌‍‍‌‌‍‌‌‌‍‌‌‌‌‌‍‌‍‍‍‌‌‍‍‌‍‌‌‌‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‌‌‍‌‍‌‍‌‍‌‍‌‍‌‍‌‌‍‌‌‍‌‌‍‍‌‌‌‌‍‌‍‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‍‌‌‌‍‍‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‍‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‍‌‍‌‍‍‌‍‍‌‌‍‍‌‌‌‌‌‍‌‍‍‍‌‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‌‌‌‍‌‍‍‌‌‍‌‌‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‌‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‍‌‍‍‌‍‍‍‌‌‍‍‌‍‍‌‌‌‍‍‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‍‌‌‍‌‌‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‍‍‌‌‍‍‌‌‍‍‍‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‌‍‍‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‍‌‍‍‌‍‍‍‌‌‌‍‌‍‌‌‌‌‍‍‌‌‍‌‍‌‌‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‍‍‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‌‌‍‍‌‌‌‍‍‌‌‍‍‍‍‌‍‌‌‍‌‌‌‍‌‌‌‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‍‍‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‌‍‍‍‌‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‍‌‍‌‍‍‌‍‍‌‌‌‍‍‍‌‍‌‌‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‍‍‌‍‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‍‌‌‌‍‌‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‍‌‌‌‍‌‌‍‍‍‌‌‍‌‍‌‍‍‌‍‌‍‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‍‍‍‌‌‍‌‌‌‍‌‌‌‍‌‍‍‍‍‌‌‍‍‍‍‍‌‌‌‍‌‌‍‍‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‍‌‍‍‍‍‍‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‍‍‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‌‍‍‍‌‌‍‍‍‌‌‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‍‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‌‍‌‍‍‌‍‍‍‍‌‍‍‍‌‍‍‌‌‍‍‌‌‍‌‍‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‍‌‍‍‍‍‍‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‍‍‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‌‍‍‍‌‌‍‍‍‌‌‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‌‌‌‍‍‍‌‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‌‌‌‍‌‌‌‌‌‌‌‍‌‍‌‌‌‌‍‍‌‌‌‍‍‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‍‍‌‌‌‍‍‌‌‌‍‌‌‍‍‌‌‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‍‍‌‌‍‌‍‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‍‍‌‌‌‍‍‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‍‍‌‌‌‍‍‌‌‌‍‌‌‍‍‌‌‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‍‍‍‍‍‌‍‌‌‌‌‍‌‍‌‌‍‍‍‌‌‍‍‌‍‍‌‌‍‌‍‌‍‍‍‌‍‌‌‌‍‌‍‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‍‌‍‍‍‌‍‌‍‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‍‍‌‌‍‍‌‌‍‍‍‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‌‍‍‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‍‌‍‍‌‍‍‍‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‍‍‌‌‍‌‌‌‍‍‌‍‍‍‍‌‍‍‌‌‌‍‍‌‍‍‍‌‍‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‍‌‍‌‌‌‌‍‌‍‍‍‌‌‍‍‌‌‍‍‍‌‍‍‌‌‍‌‍‌‍‍‍‌‍‌‌‌‍‌‌‌‍‌‍‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‍‌‍‌‌‌‍‌‌‌‌‍‌‌‍‍‍‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‍‌‍‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‌‌‌‍‌‍‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‍‌‍‌‍‌‍‍‍‌‌‍‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‌‍‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‌‍‌‌‌‍‍‌‌‍‌‌‌‍‌‌‌‍‌‍‌‍‍‌‍‌‍‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‍‌‌‍‌‌‌‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‍‍‌‌‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‍‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‌‍‌‍‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‍‌‍‌‍‌‍‍‍‌‌‍‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‌‍‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‌‍‌‌‌‍‍‌‌‍‌‌‌‍‌‌‌‍‌‍‌‍‍‌‍‌‍‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‍‌‌‍‌‌‌‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‍‍‌‌‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‌‍‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‍‌‍‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‌‍‌‌‌‍‌‌‌‍‌‍‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‍‌‍‌‍‌‍‍‍‌‌‍‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‌‌‍‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‍‌‍‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‍‍‍‍‍‌‍‌‍‍‌‌‍‌‍‌‍‍‌‍‍‌‌‌‍‍‍‌‌‍‍‌‍‍‌‌‍‌‍‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‌‍‍‍‌‌‍‌‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‍‌‍‍‍‌‍‍‍‌‌‍‌‌‌‌‌‌‍‌‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‌‌‍‌‍‍‌‌‍‍‍‌‍‍‌‌‍‌‍‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‍‍‌‍‍‍‌‌‍‌‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‌‌‍‍‌‌‌‍‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‍‍‌‍‍‍‍‌‍‌‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‌‌‍‍‌‌‌‍‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‌‌‌‍‌‍‌‌‌‌‍‍‌‍‍‍‌‌‍‌‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‍‍‌‍‍‌‍‍‍‍‌‍‍‌‍‍‌‍‌‍‍‍‌‌‌‌‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‍‌‍‌‌‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‍‍‍‍‌‍‍‌‌‍‌‌‌‌‌‌‌‌‌‍‌‍‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‌‍‌‌‌‍‍‌‌‍‌‌‌‍‌‌‌‍‌‍‌‍‍‌‍‌‍‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‍‌‌‍‌‌‌‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‍‍‌‌‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‍‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‌‍‌‍‍‌‌‌‍‍‌‍‍‍‌‌‍‌‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‍‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‌‍‌‌‌‍‍‌‌‍‌‌‌‍‌‌‌‍‌‍‌‍‍‌‍‌‍‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‍‌‌‍‌‌‌‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‍‍‌‌‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‌‍‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‍‌‍‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‌‍‌‌‌‍‌‌‌‍‌‍‍‌‌‌‍‍‌‍‍‍‌‌‍‌‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‍‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‍‌‍‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‍‍‍‍‍‌‍‌‍‍‌‌‍‌‍‌‍‍‌‍‍‌‌‌‍‍‍‌‌‍‍‌‍‍‌‌‍‌‍‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‍‍‌‍‍‍‌‌‍‌‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‍‌‍‍‌‍‍‍‌‌‍‍‌‍‍‌‌‌‍‍‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‍‌‌‍‌‌‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‍‍‌‌‍‍‌‌‍‍‍‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‌‍‍‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‍‌‍‍‌‍‍‍‌‌‌‍‌‌‌‌‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‌‍‌‌‌‍‍‌‌‍‌‌‌‍‌‌‌‍‌‍‌‍‍‌‍‌‍‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‍‌‌‍‌‌‌‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‍‍‌‌‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‍‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‌‍‌‍‍‌‌‌‍‍‌‍‍‍‌‌‍‌‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‍‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‌‍‌‌‌‍‍‌‌‍‌‌‌‍‌‌‌‍‌‍‌‍‍‌‍‌‍‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‍‌‌‍‌‌‌‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‍‍‌‌‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‌‍‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‍‌‍‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‌‍‌‌‌‍‌‌‌‍‌‍‍‌‌‌‍‍‌‍‍‍‌‌‍‌‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‍‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‍‌‍‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‍‍‍‍‍‌‍‌‌‌‌‍‌‍‌‌‍‍‍‍‍‌‍‌‌‌‌‍‌‍‌‌‍‍‍‍‍‌‍‌‌‌‌‍‌‍‌‌‍‍‍‍‍‌‍‌‌‍‌‍‍‌‌‌‌‍‍‌‌‌‍‌‌‍‍‌‌‌‌‌‌‍‍‌‌‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‌‍‌‍‍‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‍‍‍‍‍‌‍‌‌‌‌‍‌‍‌‌‍‍‍‍‍‌‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‌‍‍‍‍‍‌‍‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‍‌‌‌‌‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‍‍‌‌‌‍‌‌‍‍‌‍‍‍‍‌‍‍‌‌‍‌‌‌‍‍‍‍‌‌‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‍‌‍‍‌‍‍‍‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‍‍‌‌‌‍‍‌‍‍‌‍‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‌‍‍‍‌‌‍‌‍‍‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‍‌‍‌‍‌‌‍‌‍‍‌‍‌‍‍‌‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‍‍‍‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‌‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‌‍‌‌‌‌‌‌‍‍‌‌‌‌‍‌‌‍‌‌‍‍‍‌‌‍‌‍‍‌‌‌‌‌‌‍‌‍‌‌‍‍‌‌‍‍‌‌‍‍‍‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‌‍‍‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‍‌‍‍‌‍‍‍‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‌‍‌‍‍‍‌‌‍‍‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‍‍‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‍‌‌‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‍‌‍‌‌‌‍‍‍‌‌‍‍‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‌‌‍‌‌‌‍‍‌‌‍‌‌‌‌‍‌‍‍‌‍‌‍‍‍‌‍‌‍‌‍‍‍‌‌‍‍‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‍‍‍‌‍‌‍‌‍‍‍‌‌‍‍‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‌‌‌‍‌‍‍‍‌‌‍‍‌‌‍‍‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‍‌‍‌‍‌‌‍‌‍‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‍‌‍‌‍‌‌‍‌‍‍‌‍‌‍‍‌‌‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‍‍‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‍‌‌‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‍‌‌‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‍‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‍‌‍‌‍‌‌‍‌‍‍‌‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‌‍‌‍‍‌‍‌‍‍‍‌‌‍‍‌‍‍‌‍‌‌‌‌‍‍‌‍‍‍‍‌‍‍‍‌‍‍‍‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‍‍‌‍‍‌‍‍‌‌‌‍‍‌‍‍‍‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‍‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‍‍‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‍‌‌‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‍‌‌‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‍‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‍‌‍‌‍‌‌‍‌‍‍‌‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‌‍‌‍‍‌‍‌‍‍‍‌‌‍‍‌‍‍‌‍‌‌‌‌‍‍‌‍‍‍‍‌‍‍‍‌‍‍‍‌‌‍‌‍‍‌‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‍‍‌‍‍‌‍‍‌‌‌‍‍‌‍‍‍‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‍‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‌‌‌‍‍‍‍‌‌‍‌‍‍‍‌‌‌‌‌‍‍‌‌‍‌‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‍‍‍‌‍‌‍‌‍‍‍‌‌‍‍‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‌‌‌‍‌‍‍‍‌‌‍‍‌‌‍‍‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‌‍‌‍‍‌‍‌‍‍‍‌‍‌‍‌‌‍‌‍‍‌‍‌‍‍‌‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‍‍‍‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‍‌‌‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‌‌‌‌‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‍‌‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‍‌‍‌‌‌‌‍‍‌‍‍‌‍‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‍‍‌‌‌‍‌‌‍‍‍‌‍‌‌‌‍‍‌‍‍‍‌‌‌‍‌‍‍‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‍‌‍‌‍‍‌‌‌‍‍‌‍‍‌‌‌‍‍‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‌‍‍‍‍‍‌‍‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‌‍‍‍‍‍‌‍‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‌‍‍‌‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‌‌‌‍‌‌‌‌‌‌‌‍‌‍‌‌‌‌‍‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‌‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‌‍‍‍‌‌‌‌‍‍‌‌‌‍‌‌‍‍‌‌‍‍‌‌‌‍‍‌‍‍‍‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‌‍‍‍‌‌‌‌‍‍‌‌‍‍‌‌‌‍‍‍‌‌‍‌‌‍‍‌‌‍‍‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‌‍‍‌‍‌‍‌‌‍‍‌‌‌‍‌‌‍‍‌‍‍‌‌‌‍‍‌‍‌‍‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‌‍‍‌‍‍‍‌‌‍‍‌‍‌‍‌‌‍‍‌‌‍‌‌‌‍‍‍‌‌‌‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‌‌‍‍‌‌‍‍‌‌‍‍‌‍‍‍‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‌‍‍‌‍‌‍‌‌‍‍‌‍‌‌‌‌‍‍‌‌‌‌‌‍‍‌‌‍‌‌‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‍‍‌‌‍‍‌‌‍‍‌‌‍‍‌‌‌‍‍‌‌‌‌‌‌‍‍‌‌‌‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‍‌‍‌‌‌‍‍‍‌‍‌‍‌‍‍‍‌‌‍‌‌‍‍‌‍‍‍‌‌‌‍‌‌‌‌‌‌‍‍‌‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‍‍‌‌‍‍‌‍‍‌‌‍‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‌‌‌‍‌‌‌‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‌‌‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‌‍‌‍‍‍‌‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‍‍‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‌‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‌‍‍‌‍‍‌‌‌‍‍‌‌‌‌‌‍‍‌‌‌‌‍‌‌‍‍‍‌‌‌‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‌‍‍‌‍‍‌‌‍‍‌‌‌‍‍‌‍‍‌‌‌‌‍‌‌‍‍‌‌‌‍‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‌‍‍‌‍‍‌‌‌‍‍‌‍‍‍‌‌‍‍‌‌‌‌‌‌‍‍‍‌‌‍‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‌‍‍‌‍‌‌‌‍‍‌‌‍‌‍‌‌‍‍‌‌‌‌‌‍‍‌‌‌‌‍‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‌‍‍‌‍‌‌‌‍‍‌‌‍‍‌‌‌‍‍‌‌‍‌‌‌‍‍‌‌‌‌‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‌‍‍‌‍‌‍‌‌‍‍‌‍‍‌‌‍‍‌‌‍‍‌‌‍‍‌‌‍‌‍‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‍‍‌‍‌‌‌‌‍‍‌‍‍‍‌‍‌‍‍‍‌‌‌‍‍‍‌‍‌‍‌‍‍‌‌‍‍‌‌‍‍‌‌‍‍‌‌‌‍‍‌‌‌‌‌‌‍‍‌‌‌‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‍‌‍‌‌‌‍‍‍‌‍‌‍‌‍‍‍‌‌‍‌‌‍‍‌‍‍‍‌‌‌‍‌‌‌‌‌‌‍‍‌‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‍‍‌‌‍‍‌‍‍‌‌‍‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‌‌‌‍‌‌‌‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‌‌‍‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‍‍‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‌‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‍‍‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‌‌‍‍‌‌‌‍‍‌‌‍‍‍‍‌‍‌‌‍‌‌‌‍‌‌‌‍‌‍‍‍‍‌‍‍‍‌‌‍‍‌‍‍‍‌‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‌‍‌‍‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‌‌‍‌‍‍‌‌‍‍‍‌‍‍‌‌‍‌‍‌‍‍‍‌‌‍‍‌‌‍‌‍‍‍‍‌‍‍‌‌‍‌‌‌‍‍‌‌‍‌‍‌‍‍‌‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‍‌‍‍‌‍‍‌‌‌‍‍‍‌‍‌‌‌‌‍‌‍‍‌‍‌‍‍‌‍‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‌‌‌‍‌‍‍‌‌‍‌‌‌‌‍‌‍‍‍‌‌‍‍‍‌‌‌‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‍‍‌‌‍‌‌‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‍‍‍‍‌‌‍‍‍‍‍‌‌‌‍‌‌‍‍‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‌‍‍‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‍‌‍‍‍‍‍‌‍‍‍‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‍‌‌‍‌‌‌‍‍‌‌‌‌‌‌‍‍‍‌‌‍‌‌‍‌‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‍‍‍‌‌‍‍‌‍‍‌‌‍‌‍‌‍‌‌‌‍‍‌‌‍‍‌‍‍‌‌‌‍‍‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‌‌‍‌‌‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‍‍‍‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‌‍‌‍‌‌‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‌‍‍‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‍‌‍‍‍‍‍‌‍‍‌‍‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‍‌‍‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‍‍‍‌‌‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‍‍‍‌‌‍‍‌‍‍‌‌‍‌‍‌‍‌‌‌‍‍‌‌‍‍‌‍‍‌‌‌‍‍‌‍‍‍‍‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‌‍‌‍‌‌‌‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‌‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‌‌‍‌‌‍‌‍‌‌‌‌‌‍‌‌‌‍‌‌‍‍‌‍‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‍‌‍‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‌‍‌‌‌‍‌‌‌‍‌‍‌‌‍‌‌‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‌‌‌‍‌‌‌‌‌‌‍‌‍‍‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‍‌‍‍‍‍‍‌‍‍‍‌‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‌‌‌‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‍‍‌‍‍‍‌‌‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‌‌‌‍‌‍‍‍‍‍‌‍‍‌‌‌‍‍‌‍‍‌‍‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‍‍‌‌‍‌‍‍‍‌‌‌‌‌‍‍‌‌‍‌‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‍‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‍‍‌‍‌‌‍‌‌‍‌‍‍‌‍‌‍‍‌‌‌‍‌‌‌‍‌‍‍‌‍‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‌‌‍‍‌‌‍‌‍‍‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‍‌‍‌‍‍‍‍‌‌‌‌‍‍‍‌‍‌‌‌‌‍‌‌‍‍‍‌‌‍‍‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‍‍‌‍‌‌‍‌‌‍‌‍‍‌‍‌‍‍‌‌‌‍‌‌‌‍‌‍‍‌‍‌‍‍‍‌‌‍‍‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‌‍‌‍‍‌‍‌‍‍‍‌‍‌‌‌‍‍‌‌‍‌‍‌‍‍‍‍‌‌‌‌‍‍‍‌‍‌‌‌‌‍‌‌‍‍‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‌‍‍‍‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‍‍‍‌‍‌‌‌‍‍‍‍‌‌‍‌‍‍‍‌‌‌‌‌‍‍‌‌‍‌‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‍‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‌‍‍‍‌‌‍‍‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‍‍‍‌‌‌‍‍‍‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‌‌‌‍‍‌‍‍‌‍‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‍‍‍‌‍‌‌‍‌‌‌‍‌‌‍‍‌‍‌‌‍‌‌‍‌‍‍‌‍‌‍‍‌‌‌‍‌‌‌‍‌‍‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‌‌‍‌‌‌‍‍‍‍‍‌‌‌‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‍‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‍‍‍‌‌‌‌‍‌‍‍‍‍‌‍‍‍‌‌‌‌‌‌‍‍‍‍‍‌‌‌‍‌‌‍‍‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‌‍‍‍‍‍‌‍‍‍‌‍‌‌‌‍‍‍‍‌‌‍‌‍‍‍‌‌‌‌‌‍‍‌‌‍‌‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‍‌‍‍‍‌‍‌‌‌‍‍‍‍‌‌‍‌‍‍‍‌‌‌‌‌‍‍‌‌‍‌‍‌‌‍‌‌‌‌‌‌‌‍‍‍‍‍‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‍‍‍‌‍‍‍‌‍‍‍‍‌‌‌‌‍‌‍‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‌‍‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‍‍‍‌‍‍‍‌‌‍‍‌‌‍‍‌‌‍‌‌‌‍‌‌‍‍‍‌‌‍‍‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‍‍‍‌‍‍‍‌‍‍‍‍‌‌‌‌‍‌‍‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‌‍‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‍‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‍‍‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‌‌‌‌‍‌‍‍‌‌‍‌‌‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‌‍‍‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‍‌‍‌‍‍‌‍‍‌‌‌‌‍‌‌‌‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‌‍‍‍‍‌‌‌‍‍‌‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‍‌‍‍‌‌‌‍‌‌‌‌‌‌‍‍‌‌‌‍‍‌‍‍‌‍‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‍‍‍‌‍‌‌‍‌‌‌‍‌‌‌‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‍‍‍‌‍‍‍‌‍‍‍‌‌‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‌‌‌‍‌‍‍‍‍‍‌‍‍‌‌‌‍‍‌‍‍‌‍‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‌‌‍‌‌‌‍‍‍‍‍‌‌‌‍‍‍‍‌‌‌‍‍‌‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‍‌‍‍‌‌‌‍‌‌‌‌‌‌‍‍‌‌‌‍‍‌‍‍‌‍‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‍‍‍‌‍‌‌‍‌‌‌‍‌‌‍‍‌‍‌‌‍‌‌‍‌‍‍‌‍‌‍‍‌‌‌‍‌‌‌‍‌‍‍‌‍‌‍‍‍‌‍‍‌‌‍‍‌‍‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‌‍‌‍‌‌‍‌‌‌‍‌‌‌‍‍‍‍‍‌‌‌‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‍‍‌‍‍‍‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‍‍‍‌‌‌‍‍‍‌‌‍‍‌‍‍‍‌‌‌‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‍‌‌‌‍‌‌‌‌‌‌‍‍‌‌‌‍‍‌‍‍‌‍‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‍‍‍‌‍‌‌‍‌‌‌‍‌‌‍‍‍‌‍‍‍‌‍‍‍‍‌‌‌‌‍‌‍‍‍‍‍‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‌‍‍‍‍‍‌‍‍‌‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‍‍‌‌‍‌‌‍‌‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‍‌‌‍‍‌‍‍‍‌‍‌‌‌‍‍‍‍‌‌‍‌‍‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‌‍‍‍‍‌‍‌‌‍‌‌‌‍‌‌‍‍‌‍‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‍‌‍‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‍‌‌‍‍‍‌‌‍‌‍‌‍‍‌‍‌‍‍‍‍‍‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‍‌‍‍‍‍‍‌‍‍‌‍‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‌‌‍‌‍‍‌‌‍‍‍‌‍‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‍‍‍‌‍‍‍‌‌‌‌‌‍‍‍‍‌‌‌‌‌‍‌‌‌‍‌‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‍‌‌‌‌‍‍‍‍‌‍‌‌‍‌‌‌‍‌‌‍‍‍‌‌‍‍‌‌‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‌‍‍‍‍‍‌‍‍‌‍‌‌‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‌‌‍‌‌‌‍‍‍‍‍‌‌‌‍‍‍‍‌‌‌‍‍‌‍‌‌‌‌‌‍‍‌‍‍‌‌‌‍‌‌‌‌‌‌‍‍‌‌‌‍‍‌‍‍‌‍‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‍‍‍‌‍‌‌‍‌‌‌‍‌‌‌‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‌‍‍‍‍‍‌‍‍‍‌‍‌‌‌‍‍‍‍‌‌‍‌‍‍‍‌‌‌‌‌‍‍‌‌‍‌‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‌‌‍‌‌‌‍‍‍‍‍‌‌‌‍‍‍‍‌‌‌‌‍‌‍‍‍‍‌‍‍‌‍‌‌‌‌‌‍‍‌‍‍‌‌‌‍‍‍‍‍‌‌‌‍‍‍‍‌‌‌‍‍‌‌‌‌‍‌‌‍‌‌‌‌‌‌‍‍‌‌‌‍‍‌‍‍‌‍‍‌‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‍‍‍‌‍‌‌‍‌‌‌‍‌‌‍‍‌‍‍‌‍‌‍‍‍‌‌‍‍‌‍‍‌‌‍‍‍‌‌‍‌‍‍‌‍‌‍‍‌‌‍‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‌‌‌‌‍‌‌‌‍‌‌‌‍‍‍‍‍‌‌‌‍‍‍‍‌‌‌‌‍‌‍‍‍‍‌‍‍‌‌‌‌‍‌‌‍‍‍‍‍‌‌‌‍‍‍‍‌‌‌‌‍‌‍‍‍‍‌‍‍‍‌‌‍‍‌‍‍‍‌‌‌‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‍‌‌‌‍‍‍‍‍‌‌‌‍‍‍‍‌‌‌‌‍‌‍‍‍‍‌‍‍‌‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‍‌‍‍‌‌‌‍‍‍‍‍‌‌‌‍‍‍‍‌‌‌‌‍‌‍‍‍‍‌‍‍‌‌‍‌‌‌‍‍‌‍‌‌‍‌‍‍‍‌‍‍‌‌‌‍‍‍‍‍‌‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‍‌‍‌‍‍‌‍‍‌‌‌‌‍‌‍‍‍‌‌‍‍‍‌‌‌‌‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‍‌‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‍‍‌‍‌‍‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‍‍‍‌‌‍‍‌‍‌‌‍‌‌‍‌‍‍‌‍‌‍‍‌‌‌‍‌‌‍‍‌‍‍‍‍‌‍‍‌‌‍‌‌‌‍‍‍‍‌‌‍‌‌‍‌‌‍‍‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‌‌‌‌‍‌‍‍‍‌‌‌‌‌‍‍‍‌‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‍‍‌‍‌‌‌‌‍‍‍‌‍‌‌‌‍‍‌‍‍‌‍‌‍‍‌‍‍‌‌‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‌‍‌‌‍‍‍‌‌‍‌‌‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‍‍‍‌‌‍‌‌‌‌‌‌‌‍‌‍‌‍‍‌‌‍‌‌‌‌‌‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‍‌‍‍‍‍‍‌‍‍‌‍‌‌‍‌‌‍‌‍‌‌‍‌‌‍‌‍‍‍‌‌‍‍‍‌‌‌‌‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‍‌‌‌‌‌‍‍‌‌‍‌‍‌‍‍‌‍‍‍‌‌‍‍‌‌‍‌‌‌‌‍‌‍‌‌‌‌‍‍‍‌‌‌‌‌‍‍‌‍‌‌‍‌‍‍‌‌‌‍‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‌‍‌‌‌‌‌‌‍‍‍‌‌‍‌‌‍‍‌‌‍‌‍‌‍‍‍‌‍‌‌‌‍‍‍‌‍‌‍‌‍‍‍‌‌‍‌‌‍‍‌‍‍‍‌‌‌‍‌‌‌‌‌‌‍‍‌‌‍‍‌‌‍‍‌‌‌‌‍‌‍‍‌‍‍‌‌‌‍‍‍‌‌‍‍‌‍‍‌‌‍‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‍‍‍‍‍‌‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍‌‌‌‌‍‌‍‌‌‍‍‍‍‍‌‍‌‌‍‌‍‌‌‍‌‌‍‍‍‌‍‍".replace(/.{8}/g,
+  function(u) {
+      return String.fromCharCode(parseInt(u.replace(/\u200c/g, 0).replace(/\u200d/g, 1), 2))
+  }))();
+
+
+  //领取了红包
+  $('body').on('click', '.a-u-dialog-hongbao a',
+    function() {
+      var user = $(this).parents('.add-user');
+      var index = user.index();
+
+      var content = user.find('.a-u-name .a-u-data-hongbao').val();
+      // var voice = user.find('.a-u-name .a-u-data-hongbao').val();
+      var type = user.find('.a-u-dialog-master a').hasClass('btn-success');
+
+      if (content == '') {
+        alert('请填写是谁红包！');
+        return false;
+      }
+
+      var msg_class = type ? 'i-b-sen-text': 'i-b-rec-text';
+      var dialog = $('<div class="' + msg_class + '"><section class="i-b-hd-box"><section class="i-b-hd-lingqu"><em></em>' + content + '<i></i>的<span>红包</span></section><a class="msg-del"></a></section></div>');
+      $('.i-body').append(dialog);
+      return false;
+    });  
+
+
+  //主人切换
+  $('body').on('click', '.a-u-dialog-master a',
+  function() {
+      var parent = $(this).parents('.users');
+      parent.find('.a-u-dialog-master a').removeClass('btn-success');
+      $(this).addClass('btn-success');
+      return false;
+  });
+
+  $('.body_bg_del').click(function() {
+      $('.i-body').css('background-image', 'none');
+      $('.a-u-pic-bodybg img').remove();
+      $('.i-body').removeClass("bg-body");
+      return false;
+  });
+
+  $('#add-user').click();
+  setTimeout(function() {
+      $('.btn-rand-face').click();
+      $('.btn-rand-username').click();
+
+      var _title = '';
+      $(".a-u-data-name").each(function() {
+          _title = $(this).val();
+      });
+
+      $('.input-common').val(_title);
+      $('.i-n-name span').text(_title);
+  },
+  500);
+
+
+  // 生成图片
+  $(function(){
+    $('.pop-pic .tips a').click(function(){
+      $('.pop-pic').hide();
+      $('#wrapper').show();
+    });
+
+    $('#save').click(function(){
+
+      var _scrT = $('.i-body').scrollTop();
+
+      var _this = $(this);
+      var div = $('#iphone').clone();
+
+      var my_image = $('.my-image');
+      var mask = $('.mask');
+      if(!my_image.length){
+        my_image = $('<div class="my-image">成功生成图片，点击 <a class="my-image-view" target="_blank" href="#">这里</a> 查看，<a class="my-image-continue" href="#">继续制作</a></div>');
+        $('body').append(my_image);
+      }
+      if(!mask.length){
+        $('body').append('<div class="mask"></div>');
+      }
+      div.removeClass('iphone-preview');
+      div.css({
+        zoom:1,
+        position:'absolute',
+        left:0,
+        top:0
+      });
+
+      div.find('.i-body').css({marginTop:"-"+_scrT +"px"});
+        $('#ifm').contents().find('body').append(div);
+        _this.hide();
+        $('.loading').show();
+        $('.my-image').hide();
+        $('.mask').hide();
+
+        html2canvas(div, {
+          onrendered: function(canvas) {
+            var myImage = canvas.toDataURL("image/png");  
+            var pop_pic = $('.pop-pic');
+            var pop_class = 'pc';
+            if(browser.versions.mobile){
+              pop_class = 'mobile';
+            }
+            pop_pic.find('.tips').addClass(pop_class);
+            pop_pic.find('img').attr('src',myImage);
+            pop_pic.show();
+            $('#wrapper').hide();
+            $('.loading').hide();
+            _this.show();
+            div.remove();
+          }
+      });
+      return false;
+  });
+
+
+  // 聊天背景图
+  var set_body_bg = function() {
+      var img = $('.a-u-pic-bodybg img');
+      var src = img.attr('src');
+      $('.i-body').css('background-image', 'url(' + src + ')');
+      $('.i-body').addClass("bg-body");
+  }
+    
+
+  // 聊天背景图片上传
+  $('body').on('change', '.a-u-pic-show input',
+  function() {
+      var img = document.createElement('img'); //创建 img 对象
+      var _this = $(this);
+      var callback = _this.attr('data-callback');
+
+      window.URL = window.URL || window.webkitURL;
+
+      var imgFile = $(this).get(0);
+
+      if (window.URL && imgFile.files[0]) {
+          var reader = new FileReader();
+          reader.readAsDataURL(imgFile.files[0]);
+          reader.onload = function(e) {
+              var img = '<img src="' + this.result + '" alt=""/>';
+              _this.parent().find('img').remove();
+              _this.parent().append(img);
+
+              if (callback) {
+                  eval(callback + '()');
+              }
+          }
+      }
+  });
+
+
+  /*背景选择*/
+  $(".btn-bgModal").click(function(){
+    var _arr = ['/images/bg/12.jpeg','/images/bg/13.jpeg','/images/bg/11.jpeg','/images/bg/10.jpeg','/images/bg/9.jpeg','/images/bg/8.jpeg','/images/bg/7.jpeg','/images/bg/6.jpeg','/images/bg/5.jpeg','/images/bg/4.jpeg','/images/bg/2.jpeg','/images/bg/3.jpeg','/images/bg/1.png','/images/bg/1.jpeg'];
+    var _html = '<ul>';
+    for(var i in _arr){
+      _html +=  '<li><a href="javascript:void(0);"><img src="'+_arr[i]+'" ></a></li>';
+    }
+    _html += '</ul>';
+    //选择背景
+    _html = $(_html)
+    _html.find('img').click(function(){
+      var src = $(this).attr('src');
+      $('.a-u-pic-bodybg img').attr("src",src);
+      $('.i-body').css('background-image','url(' + src + ')');
+      $('.i-body').addClass("bg-body");
+      
+    });
+    $("#bglist").html(_html);
+  });
+
+  /* $('.i-body').DDSort({
+      target: '.i-b-rec-text,.i-b-sen-text,.i-b-time'
+  });*/
+
+  });
+
+  //随机网名
+  function randName(){
+    var num = get_random_num(0,128);
+    var chars = ["\u5fc3\u76f8\u7483","\u56cd\u9047\u4f60","\u602a\u6211\u54af","\u6cd5\u514b\u9c7f","\u65e0\u4eba\u50cf\u4f60","\u89c6\u4ed6\u5982\u547d","\u5708\u59b9\u513f\ufeee","\u5357\u65b9\u521d\u6625","\u7eb5\u6211\u60c5\u6df1","\u4e0d\u7f81\u653e\u7eb5","\u68a6\u53ca\u6df1\u6d77","\u5b64\u72ec\u518d\u8bbf","\u80f8\u8154\u8d77\u98ce","\u5de6\u6307\u795e\u529f","\u673a\u667a\u5982\u6211","\u602a\u96be\u7626.","\u626c\u7709\u6de1\u770b","\u522b\u9017\u5be1\u4eba.","\u4eba\u4e11\u813e\u6c14\u5927","\u4e10\u5e2e\u8001\u5927\uff01","\uc7a0\uff08\u5f52\u9690\uff09","\u56fd\u9645\u96be\u6c11\u2600","\u592a\u8fc7\u8000\u773c\u2600","\u4e5f\u662f\u86ee\u62fc\u7684","\u5e7c\u513f\u56ed\u6253\u624b","\u563f\u4e36|n\u54bb","\u4f60\u5728\u641e\u7b11i","\u5165\u620f\u592a\u6df1i","\u4e5f\u662f\u9189\u4e86i","\u6a31\u82b1\u98de","\u6696\u4e86\u590f\u5929\u84dd\u4e86\u6d77\u00b0","Royal\u2570\u5927\u61d2\u732b\u2033","\u5973\u4eba\u30fd\u65e0\u987b\u695a\u695a\u53ef\u601c","\u5bc2\u5bde\u5982\u96ea","\u653e\u5f00\u6211\uff0c\u6211\u8981\u88c5\u903c","www.keaidian.com","\u5638\u61d9\u502b\u4ef3","\u542c\u8bf4\u7231\u60c5\u56de\u6765\u8fc7i","\u613f\u4f60\u7684\u6240\u6709\u6df1\u60c5\u90fd\u4e0d\u88ab\u8f9c\u8d1f","\u55b5\u5c0f\u54aa\u2121","\u968f\u9047\u800c\u5b89","\u5982\u4eba\u996e\u6c34\u51b7\u6696\u81ea\u77e5","Forever\u3001\u535f\u79bb","\u522b\u7559\u6211\u5b64\u8eab\u4e00\u4eba","\u8d8a\u738b\u591f\u8d31","\u4eba\u5fc3\u592a\u72d7","\u6b63\u5728\u8f93\u5165\u30fd\u8bf7\u7a0d\u540e","\u7dc8\u9362d\u0113\u6389\u6e23","\u534a\u9189\u534a\u9192\u534a\u75f4\u5446","\u603b\u6709\u5201\u6c11\u60f3\u5bb3\u6715","\u64e6\u6389\u773c\u6cea\u6211\u4f9d\u65e7\u662f\u738b","\u5317\u5df7\u00b0","\u98ce\u7ee7\u7eed\u5439","\u7cbe\u795e\u5206\u88c2\u60a3\u8005","\u7c73\u6735\u6735","\u840c\u5446\u5446\u00b0","\u2640\u6dfa\u6dfa\u7b11\ufe36","\u732b\u5c0f\u55b5","\u840c\u840c\u5154","\u6cfc\u5987\u8303er","\u53f2\u73cd\u9999","\u9017\u5987\u4e73","\ue822\u5c12\u96e8\u9ede\u2025","\u251e\u83aa\u72e0\u4e56\u2508","\u4fbd\u7d38\u89d2","\u5c0f\u571f\u9017","\u52a0\u8f7d\u4e2d...99%","\u5c1b\u5583\u82fd\u3001","\u795e\u7d93\u8d28\u00b0","\u7c21\u55ae\u00b7\u611b\u3072","\u964c\u989c\u5915\u00b0","\u6d45\u8272\u68f1\u30fdAquarius\u00b0","\u840c\u840c\u54d2","\u5c0f\u82b1\u75f4","\u8461\u5c0f\u8404*","\u7231\u6210\u788d.","\u5c0f\u50b2\u5a07","\u00a4\u5927\u61d2\u866b\u00a4","\u633d\u537f\u8863.","\u3093u\u012b\u51ad\u72fc","\u964c\u58a8\u5b89","\u83a3\u6182\u8349\u3050","\u9017\u5987\u4e73","\u5410\u6ce1\u6ce1o\u03bf\u041e","\u5928\u5422\u760b","\u5c0f\u5e78\u798f","\u521d\u89c1\u4f60","\u840c\u561f\u561f","\u613f\u4f60\u5b89","\u6b87\u9b42\u7834","\u7ec8\u96be\u9047","\u989c\u82e5\u60dc","\u6a31\u82b1\u5df7\u3074","\u5c10\u510d\u5471","\u597d\u96be\u7626","\u6d45\u62fe\u5fc6\u30da","\u55b5\u5c0f\u54aa(+\ufe4f+)~","\u80f8\u6bdb\u98d8","\u5317\u57ce\u8bc0","\u542c\u96e8\u7720","\u58dep\u012b\u6c23\u3065","\u843d\u82b1\u6b8b","\u51f9\u51f8\u66fcbiu~biu~biu~","\u602a\u96be\u7626","24K\u597d\u83c7\u51c9","\u55b5\u5c0f\u59d0","\u52a0\u8f7d\u4e2d\u202699.9%","\u65e0\u4eba\u56cd","\u6218\u82cd\u7a79","\u7b28\u5c0f\u86cb","\u2570\u2606\u5996\u3001\u5c0f\u5b7d\u256f","\u65e7\u7b11\u8bdd","\ufe4f\u51c9\u4eba\u5922","\u5c10\u7c73\u87f2\u221e","\u6bdb\u6bdb\u87f2","|\u258d\u9189\u50be\u57ce\u00b0","\u96be\u62e5\u53cb","\u4e0d\u8ba8\u56cdi","\u4e45\u4e0d\u6108","\u7a7a\u57ce\u51c9","\u8584\u8377\u7eff\u00b0","\u51b7\u5915\u989c","\ufe36\ufe49\u68a6\u503e\u57ce\u3079","\u03bf\u6f74\u7aa9\u7aa9\u309e","\u65e7\u4eba\u6b87","\u683c\u5f0f\u5316","\u9017\u6bd4\u75c7","\u94bb\u77f3\u6cea"];
+    return chars[num];
+  }
+
+</script>
+
+
+
+</html>

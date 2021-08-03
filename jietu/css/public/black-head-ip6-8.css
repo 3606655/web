@@ -1,0 +1,44 @@
+
+/* 模拟器头部 */
+.i-top{	height: 128px; width: 100%;	position: absolute;	top: 0;	left: 0; overflow: hidden;	z-index: 1000; }
+.i-top-elm{	float: left; height: 40px; }
+.i-top-elm-r{ float: right;	height: 40px; }
+.i-top-time{ width: 150px; position: absolute; left: 50%; top: 0; margin-left: -75px; color: #000; line-height: 42px; text-align: center; font-size: 25px; font-family:pingfangcuti; font-weight: bold; }
+.i-top-berry,.i-top-berry2{	width: 68px; background: url(../../images/ip6-8-2019/black/i-top-berry1.png) no-repeat; position: relative; }
+.i-top-berry2{ background: url(../../images/ip6-8-2019/black/i-top-berry2.png) right 0 no-repeat; width: 84px; }
+.i-top-berry i{	position: absolute;	height: 15px; width: 40px; bottom: 12px; left: 8px;	}
+.i-top-berry2 i{ position: absolute; height: 15px; width: 40px;	bottom: 12px; left: 8px; }
+.i-top-berry i em{ width: 50%; background: #000; height: 100%; display: block; border-radius: 2px; }
+.i-top-berry2 i em{	background: #4cd964 !important;	border-radius: 2px;}
+.i-top-dir{	width: 30px; background: url(../../images/ip6-8-2019/black/i-top-dir.png) no-repeat; }
+.i-top-berry-num{ color: #000; font-size: 24px;	line-height: 42px; margin-left: 8px; }
+/* 信号 */
+.i-signal{ background: url(../../images/ip6-8-2019/black/i-top-signal4.png) no-repeat;	width: 54px; }
+.i-signal1{	background: url(../../images/ip6-8-2019/black/i-top-signal1.png) no-repeat; }
+.i-signal2{	background: url(../../images/ip6-8-2019/black/i-top-signal2.png) no-repeat; }
+.i-signal3{	background: url(../../images/ip6-8-2019/black/i-top-signal3.png) no-repeat; }
+.i-signal4{	background: url(../../images/ip6-8-2019/black/i-top-signal4.png) no-repeat; }
+/* 运营商 */
+.i-carrier{	line-height: 40px; color: #fff;	font-size: 22px; width: 105px; }
+.i-c-dx{ background: url(../../images/ip6-8-2019/black/i-carrier-dx.png) center 0 no-repeat; }
+.i-c-yd{ background: url(../../images/ip6-8-2019/black/i-carrier-yd.png) center 0 no-repeat; }
+.i-c-lt{ background: url(../../images/ip6-8-2019/black/i-carrier-lt.png) center 0 no-repeat; }
+/* 网络 */
+.i-network{	width: 50px; }
+.i-n-wifi1{	background: url(../../images/ip6-8-2019/black/i-top-wifi1.png) no-repeat; }
+.i-n-wifi2{	background: url(../../images/ip6-8-2019/black/i-top-wifi2.png) no-repeat; }
+.i-n-wifi{ background: url(../../images/ip6-8-2019/black/i-top-wifi3.png) no-repeat; }
+.i-n-e{	background: url(../../images/ip6-8-2019/black/i-top-e.png) center 0 no-repeat; }
+.i-n-g{	background: url(../../images/ip6-8-2019/black/i-top-g.png) center 0 no-repeat; }
+.i-n-3g{ background: url(../../images/ip6-8-2019/black/i-top-3g.png) center 0 no-repeat; }
+.i-n-4g{ background: url(../../images/ip6-8-2019/black/i-top-4g.png) center 0 no-repeat; }
+.i-n-lte{ background: url(../../images/ip6-8-2019/black/i-top-lte.png) center 0 no-repeat; }
+/* 头部导航栏 */
+.i-nav{	height: 88px; clear: both; text-align: center; color: #181818; line-height: 88px; font-size: 34px; position: relative; border-bottom:1px solid #ddd; }
+.i-n-back{ position: absolute; left: 0;	top: 0;	width: 64px; background: url(../../images/ip6-8-2019/black/i-n-back.png) no-repeat; height: 100%; }
+.i-n-count{	position: absolute;	left: 63px;	top:20px; color: #000; font-family:pingfangzhongdeng; font-size: 30px; min-width: 48px;	height:48px; line-height:48px; display: inline-block; padding: 0px 14px; border-radius: 24px; white-space: nowrap; vertical-align: baseline; background-color: #d5d5d5; }
+.i-n-name{ font-family:pingfangcuti; }
+.i-n-name span,.i-n-name i{	display: inline-block; }
+/*.i-n-name i{ width: 30px; height: 85px;	background: url(../images/ip6-8-2019/i-n-era.png) center no-repeat; margin-left: 5px; }*/
+.i-n-user{ width: 90px;	height: 88px; position: absolute; right: 0;	top: 0;	background: url(../../images/ip6-8-2019/black/i-n-user.png) no-repeat; }
+

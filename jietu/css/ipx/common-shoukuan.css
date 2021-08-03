@@ -1,0 +1,21 @@
+
+
+
+/*+++++++++++++++++++++++++++++++++++++*/
+/* 手机模拟器 */
+
+.iphonex{ width: 828px; height: 1792px; background: url(../../images/ipx-2019/shoukuan.png) no-repeat center top; overflow: hidden; color: #000; font-family:pingfangzhongdeng; }
+
+
+/* 模拟器中心 */
+.i-n-txjine{ text-align: center; color: #000; height: 120px; margin-top: 414px; }
+.i-n-txjine span{ height: 120px; line-height: 120px; font-size: 94px; font-family: Arial; font-weight: bold; text-align: center; background: url(../../images/ipx-2019/lingqian-q-icon.png) no-repeat left 17px; padding-left: 48px; }
+
+.i-n-txsyl{ height: 60px; line-height: 60px; margin-top: 240px; padding-left: 163px; font-size: 34px; }
+
+.i-n-listcont{ padding: 644px 0px 0px 353px; }
+.i-n-listcont div{ height: 38px; line-height: 38px; font-size: 24px;  color: #808080; }
+
+/*+++++++++++++++++++++++++++++++++++++*/
+
+

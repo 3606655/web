@@ -1,0 +1,24 @@
+
+
+
+/*+++++++++++++++++++++++++++++++++++++*/
+/* 手机模拟器 */
+
+.iphone{ width: 828px; height: 1792px; background: #fcfcfc url(../../images/ipx-2019/p-hongbao-bg.png) no-repeat center top; overflow: hidden; color: #000; font-family:pingfangzhongdeng; }
+
+
+/* 模拟器中心 */
+.i-hbao_user{ height: 48px; color: #ffe2b1; text-align: center; margin-top: 63px; }
+.i-hbao_user i.i-hbao-face{ width: 48px; height: 48px; background-image: url(../../images/face/10018.jpg); background-size: 100% 100%; background-repeat: no-repeat; border-radius: 8px; display: inline-block; position: absolute; left: 0px; top: 0px; }
+.i-hbao_user p.i-n-name{ height: 48px; line-height: 48px; display: inline-block; font-size: 36px; position: relative; padding-left: 58px; font-family: pingfangzhongdeng; font-weight: bold; }
+.i-hbao_user p.i-n-name em{ font-style: normal; }
+.i-n-hbtitle{ font-size: 28px; color: #fdc69b; text-align: center; height: 74px; line-height: 74px; }
+.i-n-hbjine{ text-align: center; color: #ffe2b1; height: 120px; padding-top: 80px; }
+.i-n-hbjine p{ display: inline-block; padding-left: 30px; }
+.i-n-hbjine p span{ height: 120px; line-height: 120px; font-size: 120px; font-family: Arial; font-weight: bold; }
+.i-n-hbjine p em{ font-size: 30px; font-style: normal; font-family: pingfangzhongdeng; padding-left: 10px; }
+
+/*+++++++++++++++++++++++++++++++++++++*/
+
+
+

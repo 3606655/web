@@ -1,0 +1,28 @@
+
+
+
+/*+++++++++++++++++++++++++++++++++++++*/
+/* 手机模拟器 */
+
+.iphone{ width: 750px; height: 1334px; background: url(../../images/ip6-8-2019/lingqiantixian.png) no-repeat center top; overflow: hidden; color: #000; /*background-repeat: no-repeat; background-size: 100%;*/ font-family:pingfangzhongdeng; }
+
+
+
+/* 模拟器中心 */
+.i-hbao_user{ height: 60px; line-height: 60px; color: #000; text-align: center; margin-top: 171px; font-size: 34px; }
+.i-hbao_user p.i-n-name{ font-family: pingfangzhongdeng; }
+.i-hbao_user p.i-n-name .i-n-bank{ font-weight: normal; }
+.i-n-txjine{ text-align: center; color: #000; height: 106px; }
+.i-n-txjine span{ height: 106px; line-height: 106px; font-size: 60px; font-family: Arial; font-weight: bold; text-align: center; }
+.i-n-txje,.i-n-txfwf{  }
+.i-n-txje em,.i-n-txfwf em{ font-style: normal; margin-left: -2px; }
+.i-n-txje span,.i-n-txfwf span{ font-family: Arial; letter-spacing: -1px; margin-left: -4px; }
+
+.i-n-listcont{ padding: 107px 0px 0px 220px; }
+.i-n-listcont div{ height: 76px; line-height: 76px; font-size: 28px; }
+.i-n-listcont div.i-n-txdh{ padding: 18px 80px 0px 0px; line-height: 44px; word-break:break-word; }
+
+/*+++++++++++++++++++++++++++++++++++++*/
+
+
+

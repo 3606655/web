@@ -1,0 +1,20 @@
+
+
+
+/*+++++++++++++++++++++++++++++++++++++*/
+/* 手机模拟器 */
+
+.iphone{ width: 828px; height: 1792px; background: url(../../images/ipx-2019/zhifu.png) no-repeat center top; overflow: hidden; color: #000; /*background-repeat: no-repeat; background-size: 100%;*/ font-family:pingfangzhongdeng; }
+
+
+/* 模拟器中心 */
+.i-n-txjine{ width: 160px; text-align: center; color: #a9d7b9; height: 40px; margin-top: 288px; }
+.i-n-txjine p{ width: 100%; height: 40px; display: block; margin-left: 533px; }
+.i-n-txjine span{ height: 40px; line-height: 40px; font-size: 28px; font-family: pingfangzhongdeng; font-weight: 500; text-align: center; background: url(../../images/ipx-2019/zhifu-q-icon.png) no-repeat left 6px; padding-left: 17px; }
+
+
+/*+++++++++++++++++++++++++++++++++++++*/
+
+
+
+

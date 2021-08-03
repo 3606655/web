@@ -1,0 +1,145 @@
+
+
+
+/*+++++++++++++++++++++++++++++++++++++*/
+/* 手机模拟器 */
+.iphone{ width: 750px; height: 1334px; background-color: #ededed; overflow: hidden; color: #000; background-repeat: no-repeat; background-size: 100%; font-family:pingfangzhongdeng; }
+.i-top{ background-color: #ededed; }
+
+
+
+/*+++++++++++++++++++++++++++++++++++++*/
+/* 模拟器中心 */
+
+
+/* 删除聊天信息模块 */
+.msg-del{ position: absolute; width: 36px; height: 36px; background: url(../../images/ip6-8-2019/msg-del.png) no-repeat;	text-indent: -999999px;	left: 20px;	top: 2px; cursor: pointer; display: none; }
+.i-b-rec-text .msg-del{	right: -50px; left: auto; z-index:100; }
+.i-b-sen-text .msg-del{	left: -50px; }
+.msg-del:hover{ text-decoration: none; border: none;}
+/* 插入聊天时间 */
+.i-b-time{ margin-top: 24px; display: block; position: relative; text-align: center; }
+.i-b-time span{	border-radius: 10px; line-height: 40px;	display: inline-block; padding: 0 10px;	color:#a8a8a8; font-size: 28px;	max-width: 50%; }
+.bg-body .i-b-time span{ background: rgba(255,255,255,0.6); color: #171717; }
+/* 插入聊天内容 */
+.i-b-rec-text,.i-b-sen-text{ margin: 34px 52px 0 20px; position: relative; }
+.i-b-sen-text{ margin: 34px 20px 0 46px; }
+.i-b-rec-text:after,.i-b-sen-text:after{ content: ""; display: block; height: 0; clear: both; visibility: hidden; }
+.i-b-rec-text img,.i-b-sen-text img{ position: absolute; width: 82px; height: 82px;	left: 0; top: 0; background: #fff; border-radius: 8px; }
+.i-b-sen-text img{ left: auto; right: 0; }
+.i-b-rec-text img.qq_emoji,.i-b-sen-text img.qq_emoji{ position: static; width: 48px; height: 48px;	vertical-align: bottom;	background: none; }
+.i-b-rec-text div,.i-b-sen-text div{ position: relative; margin-left: 82px;	margin-right: 50px;	text-align: initial; }
+.i-b-sen-text div{ margin-left: 50px; margin-right: 82px; }
+.i-b-rec-text div p,.i-b-sen-text div p{ font-size: 24px; color: #737373; padding: 0; margin: 0; padding-left: 24px; display: none;	position: relative;	top: -10px;	margin-bottom: -8px; }
+.i-b-sen-text div p{ text-align: right;	padding: 0;	padding-right: 30px; }
+.i-b-rec-text div i,.i-b-sen-text div i{ position: absolute; width: 22px; height: 22px;	top: 29px; }
+.i-b-sen-text div i{ background: url(../../images/ip6-8-2019/sen-txt-bg.png) no-repeat; left: auto; right: -11px; }
+.i-b-rec-text div i{ background: url(../../images/ip6-8-2019/rec-txt-bg.png) no-repeat; left: -11px; right: auto; }
+.i-b-rec-text div span,.i-b-sen-text div span{ float: left;	min-height: 80px; min-width: 96px; margin-left: 24px; font-size: 34px; background: #fff; border-radius: 8px; position: relative; max-width:94%; }
+.i-b-rec-text div span.i-wx-pic,.i-b-sen-text div span.i-wx-pic{ background: none; border: none; }
+.i-b-rec-text div span.i-wx-pic em,.i-b-sen-text div span.i-wx-pic em{ padding: 0; }
+.i-b-rec-text div span.i-wx-pic em div,.i-b-sen-text div span.i-wx-pic em div{ border-radius: 10px; margin: 0; position: static; background-size: 100% auto; background-position: center; overflow: hidden; }
+.i-b-rec-text div span.i-wx-pic em img,.i-b-sen-text div span.i-wx-pic em img{ width: auto;	height: auto; position: static;	max-width: 80%;	border-radius: 10px; display: block; margin-left: -12px; }
+/*.i-b-rec-text div.i-b-pay span,.i-b-sen-text div.i-b-pay span{ background: url(../../images/ip6-8-2019/i-pay-send.png) no-repeat; width: 429px; height: 186px; border: none;	margin-left: 10px; }
+.i-b-sen-text .i-b-pay span.i-pay-send,.i-b-sen-text .i-b-pay span.i-pay-rec{ background: url(../../images/ip6-8-2019/i-pay-rec.png) no-repeat; margin-right:10px; }
+.i-b-rec-text div.i-b-pay span em,.i-b-sen-text div.i-b-pay span em{ position: absolute; color: #fff; margin: -8px 0 0 110px; font-size: 36px; padding-left: 23px; background: url(../../images/ip6-8-2019/i-pay-money.png) 0 31px no-repeat; }
+.i-b-sen-text div.i-b-pay span.i-pay-send em,.i-b-sen-text div.i-b-pay span.i-pay-rec em{ margin-left: 125px; padding-left: 25px; }
+.i-b-rec-text div.i-b-pay span i,.i-b-sen-text div.i-b-pay span i{ width: 260px; height: 72px; background: url(../../images/ip6-8-2019/i-pay-icon-send.png) no-repeat; left: 28px; top: 21px; }
+.i-b-rec-text div.i-b-pay span.i-pay-rec i,.i-b-sen-text div.i-b-pay span.i-pay-rec i{ background: url(../../images/ip6-8-2019/i-pay-icon-rec.png) no-repeat; }
+.i-b-sen-text div.i-b-pay span.i-pay-send i,.i-b-sen-text div.i-b-pay span.i-pay-rec i{	left: 40px; }*/
+.i-b-sen-text div span{	background: #95ec69; border-color: #95ec69;	float: right; margin-left: 0; margin-right: 24px; }
+.i-b-rec-text div span em,.i-b-sen-text div span em{ font-style: normal; padding: 20px 20px; display: block; line-height: 42px; }
+.i-b-rec-text div.i-b-voice b,.i-b-sen-text div.i-b-voice b{ position: absolute; width: 40px; height: 40px;	background: url(../../images/ip6-8-2019/rec-record.png) no-repeat; background-size: 100%; top: 20px;	left: 20px; }
+.i-b-sen-text div.i-b-voice b{ background: url(../../images/ip6-8-2019/sen-record.png) no-repeat; right: 28px; left: auto; margin-left: 20px; }
+.i-b-rec-text div.i-b-voice em,.i-b-sen-text div.i-b-voice em{ color: #000;	position: absolute;	/*right: -26px;*/ top: 0px;	/*width: 100px; padding: 20px 0; left: 68px;*/ font-size: 28px; }
+.i-b-sen-text div.i-b-voice em{ right: 79px; padding: 20px 12px 20px 10px; background: url(../../images/ip6-8-2019/i-b-voice-miao.png) no-repeat right 29px; }
+.i-b-rec-text div.i-b-voice em{ background: url(../../images/ip6-8-2019/i-b-voice-miao.png) no-repeat right 29px; padding: 20px 12px 20px 0px; text-align: right; left: 68px; }
+.i-b-rec-text div.i-b-voice strong,.i-b-sen-text div.i-b-voice strong{ position: absolute; width: 16px;	height: 16px; background: url(../../images/ip6-8-2019/i-voice-unread.png) no-repeat;	right: -37px; top: -5px; background-size: 100%; }
+.i-b-sen-text div.i-b-voice strong{	right: 0; left: -37px; }
+
+/*微信聊天底部*/
+.i-bottom{ position: absolute; width: 100%;	height: 112px; bottom: 0; left: 0; /*background: red;*/ }
+.i-b-we-cent{ width: 750px;	height: 112px; background: url(../../images/ip6-8-2019/i-bottom-wechat.png) no-repeat center top; }
+.i-bottom2 .i-b-we-cent{ width: 750px; height: 112px; background: url(../../images/ip6-8-2019/i-bottom-wechat.png) no-repeat center bottom; }
+
+
+/* 领取了谁谁红包提示 */
+section.i-b-hd-box{ height: 48px; line-height: 48px; margin: 0px 20px; text-align: center; font-size: 28px; color: #a5a5a5; }
+section.i-b-hd-box .i-b-hd-lingqu{ display: inline-block; background: url(../../images/ip6-8-2019/i-hongbao-lingqu-tishi.png) no-repeat left center; padding-left: 45px; }
+section.i-b-hd-box .i-b-hd-lingqu span{ color: #fd9931; }
+section.i-b-hd-box .i-b-hd-lingqu i,.i-b-hd-lingqu em{ font-style: normal; }
+.i-b-sen-text .i-b-hd-lingqu i:before{ content:"领取了你"; }
+.i-b-rec-text .i-b-hd-lingqu em:before{ content:"你领取了"; }
+.bg-body section.i-b-hd-box{ color: #171717; }
+.bg-body section.i-b-hd-box .i-b-hd-lingqu{ background: rgba(255,255,255,0.6) url(../../images/ip6-8-2019/i-hongbao-lingqu-tishi.png) no-repeat 21px center; padding: 0px 22px 0px 70px; border-radius: 10px; }
+.i-b-sen-text section.i-b-hd-box .msg-del{ left: -26px; }
+.i-b-rec-text section.i-b-hd-box .msg-del{ left: 0px; }
+.i-b-sen-text section.i-b-hd-box{ margin-right: 46px; }
+.i-b-rec-text section.i-b-hd-box{ margin-left: 50px; }
+/* 头像遮罩层 */
+.i-b-rec-text .wx-img-box,.i-b-sen-text .wx-img-box{ width: 84px; height: 84px; position: absolute; top: -1px; background: url(/images/ip6-8-2019/weixin/wx-img-box.png) no-repeat; background-size: 100%; border: 0; z-index: 100; }
+.i-b-rec-text .wx-img-box{ left: -1px; } 
+.i-b-sen-text .wx-img-box{ right: -1px; } 
+.bg-body .wx-img-box{display:none;}
+/* 转账 */
+.i-b-sen-text .i-b-pay2 span.i-pay-send,
+.i-b-rec-text .i-b-pay2 span.i-pay-send,
+.i-b-sen-text .i-b-pay2 span.i-pay-rec,
+.i-b-rec-text .i-b-pay2 span.i-pay-rec{ width: 469px; height: 176px; border: none; } 
+.i-b-sen-text .i-b-pay2 span.i-pay-send,
+.i-b-rec-text .i-b-pay2 span.i-pay-send{ background: url(/images/ip6-8-2019/weixin/i-pay-send.png) no-repeat 100%; }
+.i-b-sen-text .i-b-pay2 span.i-pay-rec,
+.i-b-rec-text .i-b-pay2 span.i-pay-rec{ background: url(/images/ip6-8-2019/weixin/i-pay-rec.png) no-repeat 100%; }
+.i-b-rec-text div.i-b-pay2 span em,
+.i-b-sen-text div.i-b-pay2 span em{ position: absolute; color: #fff; margin: 0px 0 0 110px; font-size: 38px; padding: 16px 0px 0px 41px; font-family: "微软雅黑"; letter-spacing:1.5px; } 
+.i-b-sen-text div.i-b-pay2 span.i-pay-send i,
+.i-b-rec-text div.i-b-pay2 span.i-pay-send i,
+.i-b-sen-text div.i-b-pay2 span.i-pay-rec i,
+.i-b-rec-text div.i-b-pay2 span.i-pay-rec i{ width: 12px; height: 22px; }
+.i-b-sen-text div.i-b-pay2 span.i-pay-send i{ background: url(../../images/ip6-8-2019/weixin/i-pay-sen-jt1.png) no-repeat; }
+.i-b-rec-text div.i-b-pay2 span.i-pay-send i{ background: url(../../images/ip6-8-2019/weixin/i-pay-sen-jt2.png) no-repeat; }
+.i-b-sen-text div.i-b-pay2 span.i-pay-rec i{ background: url(../../images/ip6-8-2019/weixin/i-pay-rec-jt1.png) no-repeat; }
+.i-b-rec-text div.i-b-pay2 span.i-pay-rec i{ background: url(../../images/ip6-8-2019/weixin/i-pay-rec-jt2.png) no-repeat; }
+.i-b-sen-text .i-b-pay2 .i-b-nick2,
+.i-b-rec-text .i-b-pay2 .i-b-nick2{ display: block; position: absolute; z-index: 100; top: 68px; color: #fff; font-size: 24px; font-family:pingfangxiti; }
+.i-b-sen-text .i-b-pay2 .i-b-nick2{ left: 124px; }
+.i-b-rec-text .i-b-pay2 .i-b-nick2{ left: 96px; }
+/* 发红包 */
+.i-b-sen-text .i-b-fhbao span.i-fhbao-send,
+.i-b-rec-text .i-b-fhbao span.i-fhbao-send,
+.i-b-sen-text .i-b-fhbao span.i-fhbao-rec,
+.i-b-rec-text .i-b-fhbao span.i-fhbao-rec{ width: 469px; height: 176px; border: none; } 
+.i-b-sen-text .i-b-fhbao span.i-fhbao-send,
+.i-b-rec-text .i-b-fhbao span.i-fhbao-send{ background: url(/images/ip6-8-2019/weixin/i-fhbao-send.png) no-repeat 100%; }
+.i-b-sen-text .i-b-fhbao span.i-fhbao-rec,
+.i-b-rec-text .i-b-fhbao span.i-fhbao-rec{ background: url(/images/ip6-8-2019/weixin/i-fhbao-rec.png) no-repeat 100%; }
+.i-b-rec-text div.i-b-fhbao span em,
+.i-b-sen-text div.i-b-fhbao span em{ position: absolute; color: #fff; margin: 0px 0 0 110px; font-size: 34px; padding: 14px 0px 0px 14px; } 
+.i-b-sen-text div.i-b-fhbao .i-fhbao-send em{ margin-top: 32px; }
+.i-b-rec-text div.i-b-fhbao .i-fhbao-send em{ margin-top: 32px; }
+.i-b-sen-text div.i-b-fhbao span.i-fhbao-send i,
+.i-b-rec-text div.i-b-fhbao span.i-fhbao-send i,
+.i-b-sen-text div.i-b-fhbao span.i-fhbao-rec i,
+.i-b-rec-text div.i-b-fhbao span.i-fhbao-rec i{ width: 12px; height: 22px; }
+.i-b-sen-text div.i-b-fhbao span.i-fhbao-send i{ background: url(../../images/ip6-8-2019/weixin/i-pay-sen-jt1.png) no-repeat; }
+.i-b-rec-text div.i-b-fhbao span.i-fhbao-send i{ background: url(../../images/ip6-8-2019/weixin/i-pay-sen-jt2.png) no-repeat; }
+.i-b-sen-text div.i-b-fhbao span.i-fhbao-rec i{ background: url(../../images/ip6-8-2019/weixin/i-pay-rec-jt1.png) no-repeat; }
+.i-b-rec-text div.i-b-fhbao span.i-fhbao-rec i{ background: url(../../images/ip6-8-2019/weixin/i-pay-rec-jt2.png) no-repeat; }
+.i-b-sen-text .i-b-fhbao .i-b-nick2,
+.i-b-rec-text .i-b-fhbao .i-b-nick2{ display: block; position: absolute; z-index: 100; top: 68px; color: #fff; font-size: 24px; font-family:pingfangxiti; }
+.i-b-sen-text .i-b-fhbao .i-b-nick2{ left: 188px; }
+.i-b-rec-text .i-b-fhbao .i-b-nick2{ left: 118px; }
+/* 图片 */
+span.wx_pic_diy img{ background:#fff none repeat scroll 0 0; height:auto; left:0; position:absolute; top:0; width:209px; }
+span.wx_pic_diy{ width:209px; height:209px; position:relative; border:0; background:0 0; }
+.i-b-sen-text div span.wx_pic_diy{ border:0; background:0 0; }
+
+/*+++++++++++++++++++++++++++++++++++++*/
+
+
+
+
+
+
+
+
