@@ -212,7 +212,7 @@ $(function(){
     });
 
     $('body').on('click','.btn-rand-face',function(){
-      var face_path = '/images/face/';
+      var face_path = '../images/face/';
       var num = get_random_num(1,60);
       var file_name = face_path + (10000 + num) + '.jpg';
       var img = '<img src="' + file_name + '" />';
