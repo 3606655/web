@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dd,dt,p,input{margin:0px;padding:0px;}
+ul,li,dl,dd,dt,ol{list-style:none;}
+ins{display:none;}
+img{border:none;display: block;}
+.clear{font-size:0px;line-height:0px;display:block;clear:both;}
+
+a{cursor:pointer;}
+a:link,a:visited{color:#0072ff;text-decoration:none;}
+a:hover{color:#0072ff;text-decoration:none;}
+a:focus{-webkit-tap-highlight-color: transparent;}
+
+body{font:15px/24px Arial,"microsoft yahei";color:#333;}
+
+
+/* css注释：设置了浏览器宽度不小于1001px时 */ 
+@media screen and ( min-width: 701px ) { 
+	.syhome_body{ width: 700px; padding: 50px 0px 20px; margin: 0 auto; text-align: center; }
+	h1.site_name{ line-height: 42px; font-size: 36px; }
+	h4.site_ms{ color: #999; font-size: 20px; line-height: 30px; font-weight: 500; margin-top: 10px; padding-bottom: 15px; border-bottom: 1px dotted #c1c1c1; }
+
+	/*data_geti_box*/
+	.data_geti_box{ margin-top: 20px; }
+	.data_geti_box:after{ clear: both; content: ""; display: table; }
+
+	.data_geti_box .ptname_wrap{  }
+	.data_geti_box .ptname_wrap h5{ height: 40px; line-height: 40px; font-size: 22px; background: #040404; padding: 0px 10px; color: #d8d8d8; }
+
+	.fad_wrap .data_geti_box .ptname_wrap h5{  }
+	.ziy_wrap .data_geti_box .ptname_wrap h5{ background: #00351d; }
+	.fzz_wrap .data_geti_box .ptname_wrap h5{ background: #003d4c; }
+	.stp_wrap .data_geti_box .ptname_wrap h5{ background: #380000; }
+
+	.data_geti_box .ptname_wrap h5 strong{ float: left; }
+	.data_geti_box .ptname_wrap h5 span{ float: right; font-weight: normal; font-size: 15px; }
+	.data_geti_box .ptname_wrap h5 span b{ margin-left: 2px; }
+
+	.data_geti_box .databox{ margin-top: 1px; }
+	.data_geti_box .databox:after{ clear: both; content: ""; display: table; }
+
+	.data_geti_box .databox table.smtab{  }
+	.data_geti_box .databox table.smtab th{ font-size: 15px; font-weight: normal; line-height: 16px; padding: 3px 2px; }
+	.data_geti_box .databox table.smtab td{ line-height: 16px; padding: 6px 0px; }
+
+	.data_geti_box .databox table{ display: table; border-spacing: 1px; width: 100%; font-size: 14px; margin-top: -1px; line-height: 20px; background: #040404; }
+	.data_geti_box .databox table th{ background: #606873; height: 30px; font-size: 18px; color: #fff; }
+
+	.fad_wrap .data_geti_box .databox table th{  } 
+	.ziy_wrap .data_geti_box .databox table th{ background: #495a52; } 
+	.fzz_wrap .data_geti_box .databox table th{ background: #384c50; } 
+	.stp_wrap .data_geti_box .databox table th{ background: #504345; } 
+
+	.data_geti_box .databox table td{ background: #fff; }
+	.data_geti_box .databox table td.tb_tit{ width: 40px; }
+	.data_geti_box .databox table.alltab td.tb_tit{ background: #e9f4f9; }
+	.data_geti_box .databox table.fftab td.tb_tit{ background: #ffedcb; }
+	.data_geti_box .databox table td.tb_num{ width: 74px; }
+	.data_geti_box .databox table td.tb_mon{ text-align: left; padding: 6px; }
+	.data_geti_box .databox table td.tb_mon span{ border: 1px solid #5f6873; border-radius: 3px; float: left; margin: 3px 6px 3px 2px; }
+	/*.data_geti_box .databox table td.tb_mon span em{ background: #ececec; padding: 0px 4px; display: block; float: left; font-style: normal; color: #999; }*/
+	.data_geti_box .databox table td.tb_mon span em{ width: 26px; background: #c5c5c5; display: block; float: left; font-style: normal; color: #666; text-align: center; }
+	.data_geti_box .databox table td.tb_mon span b{ padding: 0px 8px; }
+	
+}
+
+
+/* 设置了浏览器宽度不大于1000px时 */ 
+@media screen and ( max-width: 700px ) { 
+	.syhome_body{ width: calc(100% - 30px); padding: 50px 15px 20px; text-align: center; }
+	h1.site_name{ line-height: 30px; font-size: 24px; }
+	h4.site_ms{ color: #999; font-size: 16px; line-height: 30px; font-weight: 500; margin-top: 5px; padding-bottom: 10px; border-bottom: 1px dotted #c1c1c1; }
+
+	/*data_geti_box*/
+	.data_geti_box{ margin-top: 20px; }
+	.data_geti_box:after{ clear: both; content: ""; display: table; }
+
+	.data_geti_box .ptname_wrap{  }
+	.data_geti_box .ptname_wrap h5{ height: 40px; line-height: 40px; font-size: 22px; background: #040404; padding: 0px 10px; color: #d8d8d8; }
+
+	.fad_wrap .data_geti_box .ptname_wrap h5{  }
+	.ziy_wrap .data_geti_box .ptname_wrap h5{ background: #00351d; }
+	.fzz_wrap .data_geti_box .ptname_wrap h5{ background: #003d4c; }
+	.stp_wrap .data_geti_box .ptname_wrap h5{ background: #380000; }
+	
+	.data_geti_box .ptname_wrap h5 strong{ float: left; }
+	.data_geti_box .ptname_wrap h5 span{ float: right; font-weight: normal; font-size: 13px; }
+	.data_geti_box .ptname_wrap h5 span b{ margin-left: 2px; }
+
+	.data_geti_box .databox{ margin-top: 1px; }
+	.data_geti_box .databox:after{ clear: both; content: ""; display: table; }
+
+	.data_geti_box .databox table.smtab{  }
+	.data_geti_box .databox table.smtab th{ font-size: 14px; font-weight: normal; line-height: 16px; padding: 4px 3px; }
+	.data_geti_box .databox table.smtab td{ line-height: 16px; padding: 6px 5px; word-break:break-all; }
+
+	.data_geti_box .databox table{ display: table; border-spacing: 1px; width: 100%; font-size: 14px; margin-top: -1px; line-height: 20px; background: #040404; }
+	.data_geti_box .databox table th{ background: #606873; height: 30px; font-size: 18px; color: #fff; }
+
+	.fad_wrap .data_geti_box .databox table th{  } 
+	.ziy_wrap .data_geti_box .databox table th{ background: #495a52; } 
+	.fzz_wrap .data_geti_box .databox table th{ background: #384c50; } 
+	.stp_wrap .data_geti_box .databox table th{ background: #504345; } 
+
+	.data_geti_box .databox table td{ background: #fff; }
+	.data_geti_box .databox table td.tb_tit{ width: 34px; }
+	.data_geti_box .databox table.alltab td.tb_tit{ background: #e9f4f9; }
+	.data_geti_box .databox table.fftab td.tb_tit{ background: #ffedcb; }
+	.data_geti_box .databox table td.tb_num{ width: 66px; }
+	.data_geti_box .databox table td.tb_mon{ text-align: left; padding: 6px; }
+	.data_geti_box .databox table td.tb_mon span{ border: 1px solid #5f6873; border-radius: 3px; float: left; margin: 3px 4px 3px 2px; }
+	/*.data_geti_box .databox table td.tb_mon span em{ background: #ececec; padding: 0px 4px; display: block; float: left; font-style: normal; color: #999; }*/
+	.data_geti_box .databox table td.tb_mon span em{ width: 26px; background: #c5c5c5; display: block; float: left; font-style: normal; color: #666; text-align: center; }
+	.data_geti_box .databox table td.tb_mon span b{ padding: 0px 7px; }
+
+	
+}
