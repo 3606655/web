@@ -1,7 +1,7 @@
 @font-face{	font-family: pingfangcuti; src: url('https://cdn.jsdelivr.net/gh/3606655/web/jietu/fonts/pingfangheavy.ttf'); }
 @font-face{	font-family: pingfangzhongdeng; src: url('https://cdn.jsdelivr.net/gh/3606655/web/jietu/fonts/pingfangmedium.ttf'); }
 @font-face{	font-family: pingfangxiti; src: url('https://cdn.jsdelivr.net/gh/3606655/web/jietu/fonts/pingfanglight.ttf'); }
-@font-face{	font-family: itoptime; src: url('https://down.panb.cn/20190522/161/5ce51f7f7328eCLSUFFSFUIText.ttf?_upt=f2f87eed1558523318&_upd=SFUIText.ttf'); }
+@font-face{	font-family: itoptime; src: url('https://cdn.jsdelivr.net/gh/3606655/web/jietu/fonts/SFUIText.ttf'); }
 
 a{color: #666;}
 a:focus,a:hover{color: #333;}
